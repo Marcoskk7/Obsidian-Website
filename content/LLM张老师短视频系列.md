@@ -1,0 +1,54 @@
+# LLM张老师短视频系列
+
+- 关联：[[Transformer]]
+
+tokenization 就是通过词表，将文字转化为数字的过程
+positional encoding 就是不仅要有数字化的文字，还要有对应的位置，否则无法学到对应关系。使用的是 sin 和 cos。关于模型为什么能学习到里面的信息，没有统一的说法，只能说只要 epoch 够多，模型就是能学到对应的趋势。
+![image.png](https://raw.githubusercontent.com/Marcoskk7/TyporaImageHosting/main/20260205235952815.png)
+
+这里的每一行都是一个文字，每一列是一个 dimension。
+这里的 Positional Encoding，也就是说它的位置编码在每一轮更新的时候是不会变的，因为它这个位置编码是固定的。
+![image.png](https://raw.githubusercontent.com/Marcoskk7/TyporaImageHosting/main/20260206000304725.png)
+
+补充：也有实现会使用可学习的位置向量（learnable positional embeddings），这种情况下位置向量会随着训练更新。
+
+- layernorm 均值为零，方差为一
+![image.png](https://raw.githubusercontent.com/Marcoskk7/TyporaImageHosting/main/20260207183824862.png)
+
+## Attention
+
+假设输入的 batch size 是 4。WQ, WK, WV 都会设置成 512x512 矩阵，再输入和 WQ, WK, WV 分别相乘，得到 16x512 矩阵。然后再将 4 个批次叠加起来。 
+![image.png](https://raw.githubusercontent.com/Marcoskk7/TyporaImageHosting/main/20260207184420298.png)
+
+就是切分多头，相当于把每一句话要学习的 512 个维度，拆分成 128 个维度乘以 4。 
+![image.png](https://raw.githubusercontent.com/Marcoskk7/TyporaImageHosting/main/20260207185126527.png)
+然后切分多头就是把这切出来的 16 份东西，每一个和自己的转置相乘，来看一下每一个文字和自己文字及其余文字的相关程度。 
+![image.png](https://raw.githubusercontent.com/Marcoskk7/TyporaImageHosting/main/20260207185508269.png)
+
+这里拿到一个 16 * 16 的矩阵，就相当于拿到了文字之间的百分比对应关系。
+再把它和原始的 V 矩阵，也就是把 512 个维度切分为 4 份的那个矩阵进行相乘时，就相当于用学习到的每个字之间的百分比关系，来更新我们原本的学习维度的矩阵。 
+![image.png](https://raw.githubusercontent.com/Marcoskk7/TyporaImageHosting/main/20260207190746932.png)
+
+补充：如果按更常见的写法，输入形状可以记为 (B, L, d_model)；注意力权重一般是 softmax(QK^T / sqrt(d_k))。
+
+## Residual Connection
+
+加一层残差连接是为了防止这个指数倍的增长：就是原本的差距很大，然后再经过十几个相同的块/层后，每次放大相同的倍数，那么差距就会越来越大；同时可以防止梯度消失。
+
+dropout 就是随机扔掉一些数据，防止过拟合。
+![image.png](https://raw.githubusercontent.com/Marcoskk7/TyporaImageHosting/main/20260207201747208.png)
+
+那么现在在最后要进行输出的时候要再加上一个矩阵。这个矩阵代表的是这个词表有 10256 个词，它们对应我们设置的 512 个维度。也就是说这个词表里面的每个字都有一个对应的 512 维度的向量。
+
+![image.png](https://raw.githubusercontent.com/Marcoskk7/TyporaImageHosting/main/20260207202441067.png)
+
+那么这个它模型之前输出的矩阵和我们这个词表的矩阵相乘，得到一个 16 乘以 10256 的这个大矩阵，就表示我们这 16 个字和词表里的每一个字的关系概率。也就是到时候我们在这里面取一个 ArgMax（argmax），就可以表示这个模型最终预测这是哪个字。
+![image.png](https://raw.githubusercontent.com/Marcoskk7/TyporaImageHosting/main/20260207202453730.png)
+![image.png](https://raw.githubusercontent.com/Marcoskk7/TyporaImageHosting/main/20260207202612336.png)
+
+补充：推理时不一定用 argmax（贪心），也常用 top-k / top-p 采样来生成更自然的文本。
+
+在推理的时候，其实模型整体和训练过程是一样的，但是我们就变成了每次输入 16 个字。它这相当于就是一个滑动窗口，不停地往后滑、不停地往后预测，就生成了最终的输出结果。
+![image.png](https://raw.githubusercontent.com/Marcoskk7/TyporaImageHosting/main/20260207203605614.png)
+
+补充：很多实现会用 KV cache 来加速推理（复用历史 K/V），减少重复计算。

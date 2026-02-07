@@ -8,18 +8,17 @@
 
 ## 第一阶段：环境与工具准备（磨刀不误砍柴工）
 **目标**：掌握代码管理与服务器操作，为后续训练模型打下工程基础。
-
+- [x] 
 - **1.1 代码管理与工具** (来自 Extra B)
     - **推荐课程**：[【研 1 基本功】SSH + Git + Gitee + VSCode](https://www.bilibili.com)
     - **核心理由**：无论哪个阶段，迟早要上服务器训练。早学 Git 能在代码改崩时“救命”。
 
----
 
 ## 第二阶段：小白启蒙（深度学习与 PyTorch 入门）
 **目标**：掌握 AI 基础概念，学会使用 PyTorch 搭建并跑通基础 CV 模型。
 
 - **2.1 基础概念与 PyTorch 实战** (UP: 炮哥带你学)
-    - **课程**：[《快速入门深度学习与实战》](https://www.bilibili.com/video/BV1e34y1M7wR/)
+    - **课程**：[《快速入门深度学习与实战》](https://www.bilibili.com/video/BV1e34y1M7wR/)       
     - **核心**：弄懂线性/逻辑回归、反向传播、梯度更新。
     - **动手**：环境搭建、张量操作，跑通经典网络（AlexNet、ResNet）。
     - [[炮哥]]
@@ -41,7 +40,7 @@
     - > [!important] **知识点冲突与选择：手写 vs 调用**
       > 推荐选择 **Extra B【研 1 基本功】手写系列**。蓝斯诺特的代码虽简洁，但理解内部数据流转，手写一遍才是未来修改架构的基础。
     - **执行顺序**：
-        1. **理论**：[LLM 张老师](https://space.bilibili.com/3546611527453161/lists/2386309?type=season)短视频拆解 QKV 注意力机制。[[Transformer]]
+        1. **理论**：[LLM 张老师](https://space.bilibili.com/3546611527453161/lists/2386309?type=season)短视频拆解 QKV 注意力机制。[[LLM张老师短视频系列]]
         2. **代码**：[【研 1 基本功】一行行手写 Attention -> Encoder -> Decoder -> Transformer](https://www.bilibili.com/video/BV19Y411b7qx/)。
         3. **进阶**：[手写多头注意力机制](https://www.bilibili.com/video/BV1o2421A7Dr/)。
 
