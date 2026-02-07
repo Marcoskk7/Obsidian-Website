@@ -8,8 +8,8 @@
 
 ## 第一阶段：环境与工具准备（磨刀不误砍柴工）
 **目标**：掌握代码管理与服务器操作，为后续训练模型打下工程基础。
-- [x] 
-- **1.1 代码管理与工具** (来自 Extra B)
+- [x] **完成本阶段**
+- [x] **1.1 代码管理与工具** (来自 Extra B)
     - **推荐课程**：[【研 1 基本功】SSH + Git + Gitee + VSCode](https://www.bilibili.com)
     - **核心理由**：无论哪个阶段，迟早要上服务器训练。早学 Git 能在代码改崩时“救命”。
 
@@ -17,12 +17,13 @@
 ## 第二阶段：小白启蒙（深度学习与 PyTorch 入门）
 **目标**：掌握 AI 基础概念，学会使用 PyTorch 搭建并跑通基础 CV 模型。
 
-- **2.1 基础概念与 PyTorch 实战** (UP: 炮哥带你学)
+- [ ] **完成本阶段**
+- [ ] **2.1 基础概念与 PyTorch 实战** (UP: 炮哥带你学)
     - **课程**：[《快速入门深度学习与实战》](https://www.bilibili.com/video/BV1e34y1M7wR/)       
     - **核心**：弄懂线性/逻辑回归、反向传播、梯度更新。
     - **动手**：环境搭建、张量操作，跑通经典网络（AlexNet、ResNet）。
     - [[炮哥]]
-- **2.2 系统理论构建** (UP: 跟李沐学 AI)
+- [x] **2.2 系统理论构建** (UP: 跟李沐学 AI)
     - **课程**：《动手学深度学习 PyTorch 版》
     - **重点**：卷积神经网络 (CNN)、多层感知机 (MLP)。
     - **建议**：重点看“简洁实现”，不必纠结“从零写底层”。
@@ -32,27 +33,29 @@
 ## 第三阶段：攻克核心（Transformer 与 NLP 基础）
 **目标**：深度理解大模型的基石——Transformer。此阶段是**重中之重**。
 
-- **3.1 NLP 基础理论补充**
+- [ ] **完成本阶段**
+- [ ] **3.1 NLP 基础理论补充**
     - **推荐**：斯坦福 CS224n (Lecture 9-11)。
     - **避坑建议**：不要从旧时代的 RNN/LSTM 开始死磕，直奔 **Attention (L11)** 和 **Self-Attention/Transformers (L9)**。
     - [[cs224n]]
-- **3.2 Transformer 核心实现（必看！）**
+- [ ] **3.2 Transformer 核心实现（必看！）**
     - > [!important] **知识点冲突与选择：手写 vs 调用**
       > 推荐选择 **Extra B【研 1 基本功】手写系列**。蓝斯诺特的代码虽简洁，但理解内部数据流转，手写一遍才是未来修改架构的基础。
     - **执行顺序**：
-        1. **理论**：[LLM 张老师](https://space.bilibili.com/3546611527453161/lists/2386309?type=season)短视频拆解 QKV 注意力机制。[[LLM张老师短视频系列]]
-        2. **代码**：[【研 1 基本功】一行行手写 Attention -> Encoder -> Decoder -> Transformer](https://www.bilibili.com/video/BV19Y411b7qx/)。
-        3. **进阶**：[手写多头注意力机制](https://www.bilibili.com/video/BV1o2421A7Dr/)。
+        1. [x] **理论**：[LLM 张老师](https://space.bilibili.com/3546611527453161/lists/2386309?type=season)短视频拆解 QKV 注意力机制。[[LLM张老师短视频系列]]
+        2. [ ] **代码**：[【研 1 基本功】一行行手写 Attention -> Encoder -> Decoder -> Transformer](https://www.bilibili.com/video/BV19Y411b7qx/)。
+        3. [ ] **进阶**：[手写多头注意力机制](https://www.bilibili.com/video/BV1o2421A7Dr/)。
 
 ---
 
 ## 第四阶段：模型演进（从 BERT 到现代 LLaMA）
 **目标**：理解模型如何从基础 Transformer 进化到现代千亿参数大模型。
 
-- **4.1 经典论文研读** (UP: 跟李沐学 AI / 霹雳吧啦 Wz)
+- [ ] **完成本阶段**
+- [ ] **4.1 经典论文研读** (UP: 跟李沐学 AI / 霹雳吧啦 Wz)
     - **必读清单**：BERT, ViT, MAE, Swin Transformer。
     - **视频**：[李沐-论文精读系列](https://www.bilibili.com/video/BV1Jh411Y7WQ)。
-- **4.2 现代 LLM 关键组件** (来自 Extra B)
+- [ ] **4.2 现代 LLM 关键组件** (来自 Extra B)
     - **核心技术点**：
         - **GQA (Group Query-Attention)**：LLaMA 2/3 核心技术。
         - **RoPE (旋转位置编码)**：现代大模型标配。
@@ -64,14 +67,15 @@
 ## 第五阶段：工程实战（Hugging Face 与微调）
 **目标**：掌握工业界标准库，学会 LoRA 微调、量化与分布式训练。
 
-- **5.1 工业级工具链** (UP: 你可是处女座啊)
+- [ ] **完成本阶段**
+- [ ] **5.1 工业级工具链** (UP: 你可是处女座啊)
     - **课程**：[《手把手带你实战 HuggingFace Transformers》](https://space.bilibili.com/21060026/lists/1357748)
     - **核心技能**：Tokenizer、Dataset、Trainer、DeepSpeed 分布式训练、4/8-bit 量化。
-- **5.2 LoRA 微调进阶**
+- [ ] **5.2 LoRA 微调进阶**
     - > [!tip] **最佳路径：先原理后工具**
-      > 1. 先跟 **Extra B** 手写一个 LoRA 类，理解 A/B 矩阵旁路原理。
-      > 2. 再跟 **处女座** 学习如何用 `peft` 库进行工程化微调。
-- **5.3 多模态桥梁与部署**
+      > 1. [ ] 先跟 **Extra B** 手写一个 LoRA 类，理解 A/B 矩阵旁路原理。
+      > 2. [ ] 再跟 **处女座** 学习如何用 `peft` 库进行工程化微调。
+- [ ] **5.3 多模态桥梁与部署**
     - **CLIP 原理**：小鱼儿 at 青岛（简版复现）/ 小林绿子的怀中猫（源码讲解）。
     - **实战项目**：Qwen2.5-VL 微调部署、LLaVA 搭建。
 
@@ -80,13 +84,14 @@
 ## 第六阶段：前沿视野（深度总结与技术演进）
 **目标**：接触最前沿技术（DeepSeek, Scaling Law），洞察行业全貌。
 
-- **6.1 深度总结（强烈推荐）**
+- [ ] **完成本阶段**
+- [ ] **6.1 深度总结（强烈推荐）**
     - **UP**：EZ-Encoder [《DeepSeek 论文详解》](https://space.bilibili.com/3546829121652889/lists/4769583)
     - **价值**：串讲了 LLM 发展史、SFT、RLHF 等全链路，建议反复看 3 遍。
-- **6.2 生成式模型分支 (Diffusion)**
+- [ ] **6.2 生成式模型分支 (Diffusion)**
     - **UP**：Happy 魇
     - **重点**：Diffusion Model 全系列 + DiT (Stable Diffusion 3/Sora 的核心)。
-- **6.3 底层与 Scaling Laws**
+- [ ] **6.3 底层与 Scaling Laws**
     - **课程**：斯坦福 CS336
     - **内容**：如何在数千张 GPU 上训练、Scaling Laws 缩放定律。
 
