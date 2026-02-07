@@ -1,6 +1,3 @@
-这份笔记非常详实，结合了多个来源（Plan A、Extra B、Extra C）的精华。为了方便你在 Obsidian 中查看和管理，我将其整理为**层级清晰、重点突出、包含 Obsidian 特色语法（如呼出区块 Callouts）**的 Markdown 格式。
-
----
 
 # 大模型（LLM）全栈学习路线图
 
@@ -25,6 +22,7 @@
     - **课程**：[《快速入门深度学习与实战》](https://www.bilibili.com/video/BV1e34y1M7wR/)
     - **核心**：弄懂线性/逻辑回归、反向传播、梯度更新。
     - **动手**：环境搭建、张量操作，跑通经典网络（AlexNet、ResNet）。
+    - [[炮哥]]
 - **2.2 系统理论构建** (UP: 跟李沐学 AI)
     - **课程**：《动手学深度学习 PyTorch 版》
     - **重点**：卷积神经网络 (CNN)、多层感知机 (MLP)。
@@ -38,11 +36,12 @@
 - **3.1 NLP 基础理论补充**
     - **推荐**：斯坦福 CS224n (Lecture 9-11)。
     - **避坑建议**：不要从旧时代的 RNN/LSTM 开始死磕，直奔 **Attention (L11)** 和 **Self-Attention/Transformers (L9)**。
+    - [[cs224n]]
 - **3.2 Transformer 核心实现（必看！）**
     - > [!important] **知识点冲突与选择：手写 vs 调用**
       > 推荐选择 **Extra B【研 1 基本功】手写系列**。蓝斯诺特的代码虽简洁，但理解内部数据流转，手写一遍才是未来修改架构的基础。
     - **执行顺序**：
-        1. **理论**：[LLM 张老师](https://space.bilibili.com/45156039) 短视频拆解 QKV 注意力机制。
+        1. **理论**：[LLM 张老师](https://space.bilibili.com/3546611527453161/lists/2386309?type=season)短视频拆解 QKV 注意力机制。[[Transformer]]
         2. **代码**：[【研 1 基本功】一行行手写 Attention -> Encoder -> Decoder -> Transformer](https://www.bilibili.com/video/BV19Y411b7qx/)。
         3. **进阶**：[手写多头注意力机制](https://www.bilibili.com/video/BV1o2421A7Dr/)。
 
