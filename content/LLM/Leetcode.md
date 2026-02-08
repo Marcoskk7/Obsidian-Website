@@ -61,3 +61,23 @@ def reverseList(head):
 - [x] 234. 回文链表：[题目](https://leetcode.cn/problems/palindrome-linked-list/)
 
 - [x] 2130. 链表最大孪生和：[题目](https://leetcode.cn/problems/maximum-twin-sum-of-a-linked-list/)
+
+
+## P8 前后指针
+
+- [x] 237. 删除链表中的节点：[题解](https://leetcode.cn/problems/delete-node-in-a-linked-list/solution/ru-he-shan-chu-jie-dian-liu-fen-zhong-ga-x3kn/)
+- [x] 19. 删除链表的倒数第 N 个结点：[题解](https://leetcode.cn/problems/remove-nth-node-from-end-of-list/solution/ru-he-shan-chu-jie-dian-liu-fen-zhong-ga-xpfs/)
+- 讲解 dummynode 的使用情形，如果需要删除头结点，那么最好使用 dummynode
+
+- [x] 83. 删除排序链表中的重复元素：[题解](https://leetcode.cn/problems/remove-duplicates-from-sorted-list/solution/ru-he-qu-zhong-yi-ge-shi-pin-jiang-tou-p-98g7/)
+- [x] 82. 删除排序链表中的重复元素 II：[题解](https://leetcode.cn/problems/remove-duplicates-from-sorted-list-ii/solution/ru-he-qu-zhong-yi-ge-shi-pin-jiang-tou-p-2ddn/)
+
+### 课后作业
+
+- [x] 203. 移除链表元素：[题目](https://leetcode.cn/problems/remove-linked-list-elements/)
+- [x] 3217. 从链表中移除在数组中存在的节点：[题目](https://leetcode.cn/problems/delete-nodes-from-linked-list-present-in-array/)
+- 如果在 List 用查找那么时间复杂度是 O(n)。如果把 nums 变为一个 hash 集合，那么它的查找时间复杂度会降到 O(1)。 
+
+- [x] 2487. 从链表中移除节点：[题目](https://leetcode.cn/problems/remove-nodes-from-linked-list/)
+- 没思路的时候可以试试反转
+- [x] 1669. 合并两个链表：[题目](https://leetcode.cn/problems/merge-in-between-linked-lists/)
