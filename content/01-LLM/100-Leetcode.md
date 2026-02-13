@@ -121,8 +121,15 @@ def reverseList(head):
 
 ## P11 二叉搜索树 前序 中序 后序
 
-- [ ] 98. 验证二叉搜索树：[题解](https://leetcode.cn/problems/validate-binary-search-tree/solution/qian-xu-zhong-xu-hou-xu-san-chong-fang-f-yxvh/)
+做这类题可以先根据样例，心中模拟一遍流程，然后依旧是指盯着当前的循环即可
+前序，中左右，把范围传下去
+中序，左中右，一定严格递增
+后序，左右中，把范围向上报
 
+- [x] 98. 验证二叉搜索树：[题解](https://leetcode.cn/problems/validate-binary-search-tree/solution/qian-xu-zhong-xu-hou-xu-san-chong-fang-f-yxvh/)
+- [x] 前序方法
+- [x] 中序方法
+- [x] 后序方法
 ### 课后作业
 
 - [ ] 700. 二叉搜索树中的搜索：[题目](https://leetcode.cn/problems/search-in-a-binary-search-tree/)
@@ -136,3 +143,21 @@ def reverseList(head):
 - [ ] 106. 从中序与后序遍历序列构造二叉树：[题目](https://leetcode.cn/problems/construct-binary-tree-from-inorder-and-postorder-traversal/)
 - [ ] 889. 根据前序和后序遍历构造二叉树：[题目](https://leetcode.cn/problems/construct-binary-tree-from-preorder-and-postorder-traversal/)
 - [ ] 1110. 删点成林：[题目](https://leetcode.cn/problems/delete-nodes-and-return-forest/)
+
+## P14 回溯 子集型 分割回文串
+
+- [ ] 17. 电话号码的字母组合：[题解](https://leetcode.cn/problems/letter-combinations-of-a-phone-number/solutions/2059416/hui-su-bu-hui-xie-tao-lu-zai-ci-pythonja-3orv/)
+- [ ] 78. 子集：[题解](https://leetcode.cn/problems/subsets/solutions/2059409/hui-su-bu-hui-xie-tao-lu-zai-ci-pythonja-8tkl/)
+- [ ] 131. 分割回文串：[题解](https://leetcode.cn/problems/palindrome-partitioning/solutions/2059414/hui-su-bu-hui-xie-tao-lu-zai-ci-pythonja-fues/)
+
+### 课后作业
+
+- [ ] 257. 二叉树的所有路径：[题目](https://leetcode.cn/problems/binary-tree-paths/) 
+- [ ] 113. 路径总和 II：[题目](https://leetcode.cn/problems/path-sum-ii/) 
+- [ ] 784. 字母大小写全排列：[题目](https://leetcode.cn/problems/letter-case-permutation/)
+- [ ] LCP 51. 烹饪料理：[题目](https://leetcode.cn/problems/UEcfPD/)
+- [ ] 2397. 被列覆盖的最多行数：[题目](https://leetcode.cn/problems/maximum-rows-covered-by-columns/)
+- [ ] 1239. 串联字符串的最大长度：[题目](https://leetcode.cn/problems/maximum-length-of-a-concatenated-string-with-unique-characters/)
+- [ ] 2212. 射箭比赛中的最大得分：[题目](https://leetcode.cn/problems/maximum-points-in-an-archery-competition/)
+- [ ] 2698. 求一个整数的惩罚数：[题目](https://leetcode.cn/problems/find-the-punishment-number-of-an-integer/)
+- [ ] 93. 复原 IP 地址：[题目](https://leetcode.cn/problems/restore-ip-addresses/)
