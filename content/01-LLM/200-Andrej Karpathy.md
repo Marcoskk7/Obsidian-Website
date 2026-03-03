@@ -1,5 +1,5 @@
 
-这个网站对 LLM 整体进行了可视化，https://bbycroft.net/llm
+这个网站对 LLM 整体进行了可视化，[LLM 可视化](https://bbycroft.net/llm)
 [# Deep Dive into LLMs like ChatGPT](https://www.youtube.com/@AndrejKarpathy)
 
 
