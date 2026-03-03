@@ -32,6 +32,26 @@ def reverseList(head):
     return pre
 ```
 
+## 二叉树层序遍历 bfs
+~~~python
+def levelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:  
+    if root is None:  
+        return []  
+    ans = []  
+    q = deque([root])  
+    while q:  
+        vals = []  
+        for _ in range(len(q)):  
+            node = q.popleft()  
+            vals.append(node.val)  
+            if node.left: q.append(node.left)  
+            if node.right: q.append(node.right)  
+        ans.append(vals)  
+  
+    return ans
+~~~
+
+
 ## P6 反转链表
 - [x] 206. 反转链表：[题解](https://leetcode.cn/problems/reverse-linked-list/solution/you-xie-cuo-liao-yi-ge-shi-pin-jiang-tou-o5zy/)
 - [x] 92. 反转链表 II：[题解](https://leetcode.cn/problems/reverse-linked-list-ii/solution/you-xie-cuo-liao-yi-ge-shi-pin-jiang-tou-teqq/)
@@ -132,22 +152,63 @@ def reverseList(head):
 - [x] 后序方法
 ### 课后作业
 
-- [ ] 700. 二叉搜索树中的搜索：[题目](https://leetcode.cn/problems/search-in-a-binary-search-tree/)
-- [ ] 938. 二叉搜索树的范围和：[题目](https://leetcode.cn/problems/range-sum-of-bst/)
+- [x] 700. 二叉搜索树中的搜索：[题目](https://leetcode.cn/problems/search-in-a-binary-search-tree/)
+- [x] 938. 二叉搜索树的范围和：[题目](https://leetcode.cn/problems/range-sum-of-bst/)
 - [ ] 530. 二叉搜索树的最小绝对差：[题目](https://leetcode.cn/problems/minimum-absolute-difference-in-bst/)
 - [ ] 2476. 二叉搜索树最近节点查询：[题目](https://leetcode.cn/problems/closest-nodes-queries-in-a-binary-search-tree/)
 - [ ] 501. 二叉搜索树中的众数：[题目](https://leetcode.cn/problems/find-mode-in-binary-search-tree/)
-- [ ] 230. 二叉搜索树中第 K 小的元素：[题目](https://leetcode.cn/problems/kth-smallest-element-in-a-bst/)
+- [x] 230. 二叉搜索树中第 K 小的元素：[题目](https://leetcode.cn/problems/kth-smallest-element-in-a-bst/)
 - [ ] 1373. 二叉搜索子树的最大键值和：[题目](https://leetcode.cn/problems/maximum-sum-bst-in-binary-tree/)
 - [ ] 105. 从前序与中序遍历序列构造二叉树：[题目](https://leetcode.cn/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)
 - [ ] 106. 从中序与后序遍历序列构造二叉树：[题目](https://leetcode.cn/problems/construct-binary-tree-from-inorder-and-postorder-traversal/)
 - [ ] 889. 根据前序和后序遍历构造二叉树：[题目](https://leetcode.cn/problems/construct-binary-tree-from-preorder-and-postorder-traversal/)
 - [ ] 1110. 删点成林：[题目](https://leetcode.cn/problems/delete-nodes-and-return-forest/)
 
-## P14 回溯 子集型 分割回文串
+## P12 二叉树 最近公共祖先
 
-- [ ] 17. 电话号码的字母组合：[题解](https://leetcode.cn/problems/letter-combinations-of-a-phone-number/solutions/2059416/hui-su-bu-hui-xie-tao-lu-zai-ci-pythonja-3orv/)
-- [ ] 78. 子集：[题解](https://leetcode.cn/problems/subsets/solutions/2059409/hui-su-bu-hui-xie-tao-lu-zai-ci-pythonja-8tkl/)
+> 此类问题的重点是想明白每一种情况，怎么进行分类讨论
+> 只要画好分类图，解法就迎刃而解了
+
+> 这类递归算法，在考虑空间复杂度的时候，要考虑调用栈的使用，
+> 函数调用栈，一层层调用，也会使用 O（N）的位置
+- [x] 236. 二叉树的最近公共祖先：[题解](https://leetcode.cn/problems/lowest-common-ancestor-of-a-binary-tree/solutions/2023872/fen-lei-tao-lun-luan-ru-ma-yi-ge-shi-pin-2r95/)
+- [x] 235. 二叉搜索树的最近公共祖先：[题解](https://leetcode.cn/problems/lowest-common-ancestor-of-a-binary-search-tree/solutions/2023873/zui-jin-gong-gong-zu-xian-yi-ge-shi-pin-8h2zc/)
+
+### 课后作业
+
+- [x] 1123. 最深叶节点的最近公共祖先：[题目](https://leetcode.cn/problems/lowest-common-ancestor-of-deepest-leaves/)
+
+## P13 二叉树 层序遍历 BFS 队列
+
+- [x] 102. 二叉树的层序遍历：[题解](https://leetcode.cn/problems/binary-tree-level-order-traversal/solution/bfs-wei-shi-yao-yao-yong-dui-lie-yi-ge-s-xlpz/)
+- [x] 103. 二叉树的锯齿形层序遍历：[题解](https://leetcode.cn/problems/binary-tree-zigzag-level-order-traversal/solution/bfs-wei-shi-yao-yao-yong-dui-lie-yi-ge-s-xlv3/)
+- [x] 513. 找树左下角的值：[题解](https://leetcode.cn/problems/find-bottom-left-tree-value/solution/bfs-wei-shi-yao-yao-yong-dui-lie-yi-ge-s-f34y/)
+
+### 课后作业
+
+- [x] 107. 二叉树的层序遍历 II：[题目](https://leetcode.cn/problems/binary-tree-level-order-traversal-ii/)
+- [x] 104. 二叉树的最大深度：[题目](https://leetcode.cn/problems/maximum-depth-of-binary-tree/)
+- [ ] 111. 二叉树的最小深度：[题目](https://leetcode.cn/problems/minimum-depth-of-binary-tree/)
+- [x] 2583. 二叉树中的第 K 大层和：[题目](https://leetcode.cn/problems/kth-largest-sum-in-a-binary-tree/)
+- [ ] 199. 二叉树的右视图：[题目](https://leetcode.cn/problems/binary-tree-right-side-view/)
+- [ ] 116. 填充每个节点的下一个右侧节点指针：[题目](https://leetcode.cn/problems/populating-next-right-pointers-in-each-node/)
+- [ ] 117. 填充每个节点的下一个右侧节点指针 II：[题目](https://leetcode.cn/problems/populating-next-right-pointers-in-each-node-ii/)
+- [ ] 1302. 层数最深叶子节点的和：[题目](https://leetcode.cn/problems/deepest-leaves-sum/)
+- [x] 1609. 奇偶树：[题目](https://leetcode.cn/problems/even-odd-tree/)
+- [ ] 2415. 反转二叉树的奇数层：[题目](https://leetcode.cn/problems/reverse-odd-levels-of-binary-tree/)
+- [ ] 2641. 二叉树的堂兄弟节点 II：[题目](https://leetcode.cn/problems/cousins-in-binary-tree-ii/)
+
+## P14 子集型回溯 分割回文串
+
+增量问题，适合使用回溯实现，回溯通过递归实现
+
+> 回溯三问
+> - 当前操作？枚举 path[i]要填入的字母
+> - 子问题？构造字符串>=i 的部分
+> - 下一个子问题？构造字符串>=i+1 的部分
+
+- [x] 17. 电话号码的字母组合：[题解](https://leetcode.cn/problems/letter-combinations-of-a-phone-number/solutions/2059416/hui-su-bu-hui-xie-tao-lu-zai-ci-pythonja-3orv/)
+- [x] 78. 子集：[题解](https://leetcode.cn/problems/subsets/solutions/2059409/hui-su-bu-hui-xie-tao-lu-zai-ci-pythonja-8tkl/)
 - [ ] 131. 分割回文串：[题解](https://leetcode.cn/problems/palindrome-partitioning/solutions/2059414/hui-su-bu-hui-xie-tao-lu-zai-ci-pythonja-fues/)
 
 ### 课后作业
