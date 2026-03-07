@@ -1,3 +1,5 @@
-[[LLMs zero to hero]]
-[[Minimind]]
+[[001-LLMs zero to hero]]
+[[002-Minimind]]
 [[Happy LLM]]
+[[Hello Agent]]
+[[all-in-rag]]
