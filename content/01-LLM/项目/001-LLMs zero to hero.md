@@ -13,3 +13,5 @@ mha ---》 gra
 所以学会 GPT2 也就掌握了当代大模型的基础了
 
 关键知识点
+
+训练循环开 model.train(), 评测开 model.eval()

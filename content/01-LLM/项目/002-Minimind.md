@@ -1,4 +1,12 @@
 
+Questions:
+1. 不太理解 YaRN 的使用场景, 为什么要这样设计高低频
+2. YaRN 和 RoPE 的代码是粘贴的, 需自己看懂
+## 整体架构图
+
+![image.png](https://raw.githubusercontent.com/Marcoskk7/TyporaImageHosting/main/20260308165430021.png)
+
+
 ## RMSNorm
 ![image.png](https://raw.githubusercontent.com/Marcoskk7/TyporaImageHosting/main/20260305230437559.png)
 
@@ -27,6 +35,20 @@ d 是固定值，比如 512，pos 是位置，比如我爱你中的我，pos 就
 
 ## ROPE 旋转位置编码
 
+这一块比较难理解, 给出几个煮包学习时看过的资料供参考
+- https://www.bilibili.com/video/BV1F1421B7iv
+
+可以看到旋转矩阵有几个比较好的性质, 第一是两个旋转矩阵相乘, 等同于角度相加(逆时针); 第二是转置矩阵就是顺时针旋转
+![image.png](https://raw.githubusercontent.com/Marcoskk7/TyporaImageHosting/main/20260308190127531.png)
+
+通过数学推导可以看出, 加上旋转后的角度(即q旋转 m, n 旋转 n), 得到的点积, 既包含原先的 $qk^T$ 还包含了两者差的旋转角度(m-n)
+![image.png](https://raw.githubusercontent.com/Marcoskk7/TyporaImageHosting/main/20260308190353566.png)
+
+这里的旋转矩阵就能看出, 节省了很多空间,这是一个正方形, 假设长为 n, 那么理应要存 n * n 个参数,但是现在只需要存  2n 个参数
+![image.png](https://raw.githubusercontent.com/Marcoskk7/TyporaImageHosting/main/20260308191331133.png)
+
+
+
 ==有没有办法不搞脏元数据的同时，又能保留位置信息？
 
 >ROPE 就可以！
@@ -38,6 +60,9 @@ d 是固定值，比如 512，pos 是位置，比如我爱你中的我，pos 就
 ![image.png](https://raw.githubusercontent.com/Marcoskk7/TyporaImageHosting/main/20260307142949656.png)
 
 然后两两维度一组进行旋转，那么为什么两两一组？因为旋转只能在二维平面上进行旋转，因此只能每两个维度进行一次旋转，这样，$d_{model}$只能设置为偶数
+
+![image.png](https://raw.githubusercontent.com/Marcoskk7/TyporaImageHosting/main/20260308162201667.png)
+
 ## 正余弦 vs RoPE
 
 正余弦的位置编码，在计算注意力分数中时，会出现无意义的中间项，给计算添加噪音
@@ -48,7 +73,13 @@ d 是固定值，比如 512，pos 是位置，比如我爱你中的我，pos 就
 
 YARN的出现是为了确保训练和推理时出现 token 长度不一致的情况, 比如训练的时候 token 长度都是 2048 的,但是推理的时候 token 长度是 4096 的,那么怎么进行处理呢?
 
-
+- torch.outer(a, b)：**外积**。输入两个 1D 向量，输出一个 2D 矩阵。
+    
+- torch.dot(a, b)：**内积（点积）**。输入两个长度相同的 1D 向量，输出一个标量（单一数值）。
+    
+- torch.mul(a, b) 或 a * b：**逐元素相乘（Hadamard积）**。输入形状相同（或可广播）的张量，对应位置相乘。
+    
+- torch.matmul(A, B) 或 A @ B：**矩阵乘法**。
 ## GQA
 
 由于多份 QKV 很占用显存,因此想办法让多个 Q 共享同一组 KV 

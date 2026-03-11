@@ -68,10 +68,23 @@ Reinforcement-Learning 则是自己课下做课后习题进行提高
 
 别人都没怎么讲 reinforcement Learning publicly，只有 DeepSeek-R1 公开的进行谈论强化学习相关内容
 
-##
 # 3B1B
 
 Chapter5 讲解基础概念，FFN 是前馈神经网络，直观理解了 embedding 的含义，越相似的东西在embedding 后也应该近似，举个例子，向量父亲减去向量儿子，应该和向量父子差不多
 ![image.png](https://raw.githubusercontent.com/Marcoskk7/TyporaImageHosting/main/20260225184029883.png)
 
 ![image.png](https://raw.githubusercontent.com/Marcoskk7/TyporaImageHosting/main/20260225175739092.png)
+
+这里是 self-attention的一个图示, 当圆越大, 表示这个点积越大, 也就是说他们俩越接近
+
+视频中的 query 是针对于creature, 提问谁是我的 adj? 因此这两个值比较大 
+![image.png](https://raw.githubusercontent.com/Marcoskk7/TyporaImageHosting/main/20260308210910168.png)
+![image.png](https://raw.githubusercontent.com/Marcoskk7/TyporaImageHosting/main/20260308211113649.png)
+
+而多头注意力机制, 可以理解为多种不同的提问方式, 比如现在问我这个名词的上一个名词是什么?我这个名词的主语是谁 xx? 反正是为了表述出不同的语义信息, 发掘内在的模式
+
+## QKV机制
+那么 QKV 是怎么作用于更新的呢?
+
+像这里就是一个例子, 先用 Q 和 K 生成 query-key pair, 找到自注意力中, 和哪个位置的内容比较接近, 然后再计算一个 V, 通过第一步得到的一个接近系数(就是说和哪几个前面的词最接近, 最有关系, 有关系的程度), 比如"你是一个大好人" 假定, 大和人的关系是 0.2, 好和人的关系是 0.8, 别的是 0, 那么这个时候再做一个 V 向量 然后用 0.2* 大的位置V+0.8 * 好的位置V, 然后再降维 V 为原本生成 QKV 之前的 shape, 再将这次的∆V 更新到原始向量上去
+![image.png](https://raw.githubusercontent.com/Marcoskk7/TyporaImageHosting/main/20260211110837821.png)
