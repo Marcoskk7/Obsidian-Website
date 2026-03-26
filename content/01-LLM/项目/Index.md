@@ -1,6 +1,6 @@
 [[001-LLMs zero to hero]]
 [[002-Minimind]]
 [[Happy LLM]]
-[[003-Hello Agent 转 smol agents]]
+[[003-Hello Agent]]
 [[all-in-rag]]
-[[smolagents]]
+[[004-smolagents]]
