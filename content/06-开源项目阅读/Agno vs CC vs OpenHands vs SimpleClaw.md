@@ -1452,12 +1452,12 @@ async def connect_mcp_servers(mcp_servers, registry, stack):
 
 ### Tool 定义模式对比
 
-| 模式 | 框架 | 优点 | 缺点 |
-|------|------|------|------|
-| **Pydantic BaseModel + 装饰器** | agno | 类型提示自动生成 schema; 支持缓存/hooks/审批 | 重量级, Function 类 ~500 行 |
-| **泛型接口 + 工厂函数** | claude-code | fail-closed 默认值; Zod schema 校验; 构建时 DCE | 接口 ~70 个字段, 复杂度高 |
-| **数据类 + 动态分派** | OpenHands | 极简; 序列化友好; 事件驱动解耦 | 运行时方法名约定, 无编译期保证 |
-| **抽象类 + Registry** | SimpleClaw | 简单直观; cast/validate 管线清晰 | 手写 JSON Schema, 无自动生成 |
+| 模式                           | 框架          | 优点                                      | 缺点                     |
+| ---------------------------- | ----------- | --------------------------------------- | ---------------------- |
+| **Pydantic BaseModel + 装饰器** | agno        | 类型提示自动生成 schema; 支持缓存/hooks/审批          | 重量级, Function 类 ~500 行 |
+| **泛型接口 + 工厂函数**              | claude-code | fail-closed 默认值; Zod schema 校验; 构建时 DCE | 接口 ~70 个字段, 复杂度高       |
+| **数据类 + 动态分派**               | OpenHands   | 极简; 序列化友好; 事件驱动解耦                       | 运行时方法名约定, 无编译期保证       |
+| **抽象类 + Registry**           | SimpleClaw  | 简单直观; cast/validate 管线清晰                | 手写 JSON Schema, 无自动生成  |
 
 ### Skill 系统成熟度排序
 
