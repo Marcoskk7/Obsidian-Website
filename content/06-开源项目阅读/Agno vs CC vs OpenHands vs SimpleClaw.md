@@ -19,15 +19,15 @@
 
 ## 总览对比
 
-| 维度 | **agno** | **claude-code** | **OpenHands** | **SimpleClaw** |
-|------|----------|-----------------|---------------|----------------|
-| Tool 本质 | Python 函数/方法 (Pydantic BaseModel) | TypeScript 对象 (`buildTool` 工厂) | Action 数据类 (继承 Event) | Python 抽象类 |
-| Skill 本质 | 知识包 (MD + scripts/ + references/) | Prompt 工作流 (MD + YAML frontmatter) | 遗留插件 (Python 模块, 已废弃) | Markdown 文档 (上下文注入) |
-| 注册方式 | `@tool` 装饰器 / `Toolkit` 子类 | 集中式注册表 + feature flag | 隐式 (枚举 + 元组 dict comprehension) | `ToolRegistry` 字典 |
-| 调度机制 | LLM 选择 -> model provider 执行 | LLM 选择 -> 权限管线 -> `call()` | LLM 选择 -> `getattr` 动态分派 | LLM 选择 -> Guard 验证 -> `execute()` |
-| 并发模型 | 无显式并发管理 | 读操作并发(上限10)/写操作串行 | EventStream pub-sub | Guard 去重 + 延迟执行 |
-| 权限/安全 | 审批工作流 (confirmation) | 规则引擎 + hooks + 分类器 (allow/deny/ask) | SecurityAnalyzer + confirmation 状态机 | Guard 命令拒绝列表 |
-| MCP 支持 | 无 | 运行时动态组装 | 原生 MCPAction + MCPClient | MCPToolWrapper 包装 |
+| 维度       | **agno**                          | **claude-code**                     | **OpenHands**                       | **SimpleClaw**                    |
+| -------- | --------------------------------- | ----------------------------------- | ----------------------------------- | --------------------------------- |
+| Tool 本质  | Python 函数/方法 (Pydantic BaseModel) | TypeScript 对象 (`buildTool` 工厂)      | Action 数据类 (继承 Event)               | Python 抽象类                        |
+| Skill 本质 | 知识包 (MD + scripts/ + references/) | Prompt 工作流 (MD + YAML frontmatter)  | 遗留插件 (Python 模块, 已废弃)               | Markdown 文档 (上下文注入)               |
+| 注册方式     | `@tool` 装饰器 / `Toolkit` 子类        | 集中式注册表 + feature flag               | 隐式 (枚举 + 元组 dict comprehension)     | `ToolRegistry` 字典                 |
+| 调度机制     | LLM 选择 -> model provider 执行       | LLM 选择 -> 权限管线 -> `call()`          | LLM 选择 -> `getattr` 动态分派            | LLM 选择 -> Guard 验证 -> `execute()` |
+| 并发模型     | 无显式并发管理                           | 读操作并发(上限10)/写操作串行                   | EventStream pub-sub                 | Guard 去重 + 延迟执行                   |
+| 权限/安全    | 审批工作流 (confirmation)              | 规则引擎 + hooks + 分类器 (allow/deny/ask) | SecurityAnalyzer + confirmation 状态机 | Guard 命令拒绝列表                      |
+| MCP 支持   | 无                                 | 运行时动态组装                             | 原生 MCPAction + MCPClient            | MCPToolWrapper 包装                 |
 
 ---
 
