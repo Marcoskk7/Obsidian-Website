@@ -1468,12 +1468,12 @@ async def connect_mcp_servers(mcp_servers, registry, stack):
 
 ### 安全模型对比
 
-| 框架 | 权限决策 | 安全分析 | 命令守卫 |
-|------|----------|----------|----------|
-| **claude-code** | 多层 (rules + hooks + classifier + interactive ask) | 内置分类器 | Bash tool 级别 |
-| **OpenHands** | SecurityAnalyzer + confirmation 状态机 (HIGH/UNKNOWN → 等待确认) | 可插拔 SecurityAnalyzer | 无显式命令拒绝 |
-| **SimpleClaw** | Guard 层 + expose_to_llm 可见性控制 | 无 | 正则拒绝列表 (rm -rf, fork bomb) |
-| **agno** | requires_confirmation + approval_type | 无 | 无 |
+| 框架              | 权限决策                                                      | 安全分析                 | 命令守卫                       |
+| --------------- | --------------------------------------------------------- | -------------------- | -------------------------- |
+| **claude-code** | 多层 (rules + hooks + classifier + interactive ask)         | 内置分类器                | Bash tool 级别               |
+| **OpenHands**   | SecurityAnalyzer + confirmation 状态机 (HIGH/UNKNOWN → 等待确认) | 可插拔 SecurityAnalyzer | 无显式命令拒绝                    |
+| **SimpleClaw**  | Guard 层 + expose_to_llm 可见性控制                             | 无                    | 正则拒绝列表 (rm -rf, fork bomb) |
+| **agno**        | requires_confirmation + approval_type                     | 无                    | 无                          |
 
 ### 关键设计差异
 
