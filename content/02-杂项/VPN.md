@@ -12,5 +12,6 @@
 apt update -y && apt upgrade -y && apt install sudo curl -y
 bash <(curl -Ls https://raw.githubusercontent.com/mhsanaei/3x-ui/master/install.sh)
 
-稳定性测试
+稳定性测试:
+[https://www.itdog.cn/ping/](https://www.itdog.cn/ping/)
 开启 bbr
