@@ -8,3 +8,6 @@
 		
 		b. 回程测试
 		bash <(curl -Ls https://Check.Place) -N
+1. 更新软件+安装 3xui
+apt update -y && apt upgrade -y && apt install sudo curl -y
+bash <(curl -Ls https://raw.githubusercontent.com/mhsanaei/3x-ui/master/install.sh)
