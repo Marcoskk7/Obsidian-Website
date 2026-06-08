@@ -12,5 +12,5 @@
 apt update -y && apt upgrade -y && apt install sudo curl -y
 bash <(curl -Ls https://raw.githubusercontent.com/mhsanaei/3x-ui/master/install.sh)
 
-
+稳定性测试
 开启 bbr
