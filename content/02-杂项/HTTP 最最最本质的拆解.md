@@ -40,4 +40,7 @@ No9: [ACK] 我->example.com   好, 我来了
 从 No10 到No15 中间是 Http 真正传输的包
 
 No16到 No18, 是四次挥手的过程
-这里是服务器端处理成了 3 次, 看z
+这里是服务器端处理成了 3 次, 看下面的讲解, 
+   No16 我 → example.com  [FIN, ACK]     ① 我："我不发了（FIN）"
+   No17  example. com → 我  [FIN, ACK]     ②+③ example.com："收到（ACK），我也不发了（FIN）"  ← 合并了
+   No18 我 → example.com  [ACK]           ④ 我："好，关了（ACK）"
