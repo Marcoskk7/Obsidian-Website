@@ -37,4 +37,4 @@ No9: [ACK] 我->example.com   好, 我来了
 
 三次握手完成
 
-从 No10 到
+从 No10 到No15 中间是 Http 真正传输的包
