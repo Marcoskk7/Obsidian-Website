@@ -31,5 +31,10 @@ curl http://example.com/
 ![[Pasted image 20260701202326.png]]
 
 这里的 No. 7, 8, 9 是我们熟悉的三次握手环节, 简单来说, 每个包干了这么个事:
-No7:  我->example.com 你好, 我要跟你连接一下
-No8: [SYN, ACK]
+No7:  [SYN] 我->example.com       你好, 我要跟你连接一下
+No8: [SYN, ACK] example.com-> 我 好的, 你来吧, 我准备好了
+No9: [ACK] 我->example.com   好, 我来了
+
+三次握手完成
+
+从 No10 到
