@@ -25,4 +25,5 @@ curl http://example.com/
 此时, 抓包的完整文件已经保存在~/http_capture.pcap, 我们可以使用 wireshark 对这次的 curl http 流程做一个全流程解析了!
 首先我们按照以下顺序打开Wireshark → File → Open → 选~/http_capture.pcap
 
-然后在输入框中输入tcp.stream eq 
+然后在输入框中输入tcp.stream eq 0(此处需要修补, 不同环境不一定一致)这样后, 我们就可以看到只和 example.com 这条 curl 命令相关的所有流程
+
