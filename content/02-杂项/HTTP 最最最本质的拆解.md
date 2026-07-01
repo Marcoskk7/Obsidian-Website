@@ -20,4 +20,6 @@ sudo tcpdump -i en0 -s 0 -w ~/http_capture.pcap 'port 80'
 终端 B:
 curl http://example.com/
 ![[Pasted image 20260701201427.png]]
-可以看到, 这里获取到了对应网页的数据, 此时可以使用 ctrl+c gua
+可以看到, 这里获取到了对应网页的数据, 此时可以使用 ctrl+c 关闭终端 A
+
+此时, 抓包的完整文件已经保存在~/http_capture.pcap, 我们可以使用 wireshark 对这次的 curl http 流程做一个全流程解析了!
