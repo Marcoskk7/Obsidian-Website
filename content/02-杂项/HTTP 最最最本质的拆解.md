@@ -6,3 +6,15 @@ http://example.com/
 
 开始实验前我们先检查环境是否齐全, 具体是我们要有 tcpdump 和 wireshark, 并且可以在 wireshark 中确认我们使用的网卡是哪一个, 像我这里使用的无线 WiFi, 可以看到我使用的是 en0 网卡
 
+我们的实验很简单, 开两个终端:
+终端 A:
+sudo tcpdump -i en0 -s 0 -w ~/http_capture.pcap 'port 80'
+这里是抓包 80 端口上的流量
+  参数说明：
+  - -i en0 — 监听 en0 网卡（可能是 en5，看你 Mac 型号）
+  - -s 0 — 抓完整包，不截断
+  - -w ~/http_capture.pcap — 写到文件
+  - 'port 80' — BPF 过滤，只看 HTTP 流量
+
+终端 B:
+curl http://neverssl.c
