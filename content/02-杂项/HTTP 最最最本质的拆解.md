@@ -30,4 +30,6 @@ curl http://example.com/
 
 ![[Pasted image 20260701202326.png]]
 
-这里的 No. 7, 8, 9 是我们shu'c
+这里的 No. 7, 8, 9 是我们熟悉的三次握手环节, 简单来说, 每个包干了这么个事:
+No7:  我->example.com 你好, 我要跟你连接一下
+No8: [SYN, ACK]
