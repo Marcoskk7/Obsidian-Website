@@ -47,5 +47,8 @@ No16到 No18, 是四次挥手的过程, 一个标注的四次挥手流程如下:
 
 这里是服务器端处理成了 3 次, 看下面的讲解, 
    No16 我 → example.com  [FIN, ACK]     ① 我："我不发了（FIN）"
-   No17  example. com → 我  [FIN, ACK]     ②+③ example.com："收到（ACK），我也不发了（FIN）"  ← 合并了
+   No17  example. com → 我  [FIN, ACK]     ②+③ example.com："收到你的 FIN，我也不发了"  ← 合并了
    No18 我 → example.com  [ACK]           ④ 我："好，关了（ACK）"
+
+
+好, 现在三次握手和四次挥手看完了, 我们来深入 http 协议中, 计算机网络中到底在做什么操作?
