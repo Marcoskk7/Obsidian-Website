@@ -39,7 +39,12 @@ No9: [ACK] 我->example.com   好, 我来了
 
 从 No10 到No15 中间是 Http 真正传输的包
 
-No16到 No18, 是四次挥手的过程
+No16到 No18, 是四次挥手的过程, 一个标注的四次挥手流程如下:
+① 我 : FIN       →   "我不发了"
+② example.com: ACK       ←   "收到你的 FIN"
+③ example.com: FIN       ←   "我也不发了"     ← 这里应该还有一个包
+④ 我: ACK       →   "收到，关了"
+
 这里是服务器端处理成了 3 次, 看下面的讲解, 
    No16 我 → example.com  [FIN, ACK]     ① 我："我不发了（FIN）"
    No17  example. com → 我  [FIN, ACK]     ②+③ example.com："收到（ACK），我也不发了（FIN）"  ← 合并了
