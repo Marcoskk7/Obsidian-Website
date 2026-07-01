@@ -52,3 +52,5 @@ No16到 No18, 是四次挥手的过程, 一个标注的四次挥手流程如下:
 
 
 好, 现在三次握手和四次挥手看完了, 我们来深入 http 协议中, 计算机网络中到底在做什么操作?
+(推荐https://xiaolincoding.com/network/1_base/tcp_ip_model.html#%E5%BA%94%E7%94%A8%E5%B1%82, 本文参考了相关知识点的内容)
+
