@@ -23,3 +23,6 @@ curl http://example.com/
 可以看到, 这里获取到了对应网页的数据, 此时可以使用 ctrl+c 关闭终端 A
 
 此时, 抓包的完整文件已经保存在~/http_capture.pcap, 我们可以使用 wireshark 对这次的 curl http 流程做一个全流程解析了!
+首先我们按照以下顺序打开Wireshark → File → Open → 选~/http_capture.pcap
+
+然后在输入框中输入tcp.stream eq 
