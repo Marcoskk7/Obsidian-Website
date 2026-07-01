@@ -15,6 +15,9 @@ sudo tcpdump -i en0 -s 0 -w ~/http_capture.pcap 'port 80'
   - -s 0 — 抓完整包，不截断
   - -w ~/http_capture.pcap — 写到文件
   - 'port 80' — BPF 过滤，只看 HTTP 流量
+![[Pasted image 20260701201417.png]]
 
 终端 B:
-curl http://neverssl.c
+curl http://example.com/
+![[Pasted image 20260701201427.png]]
+可以看到, 这里获取到了对应网页的数据, 此时可以使用 ctrl+c gua
