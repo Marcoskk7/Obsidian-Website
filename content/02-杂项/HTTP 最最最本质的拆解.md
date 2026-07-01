@@ -28,3 +28,6 @@ curl http://example.com/
 然后在输入框中输入tcp.stream eq 0(此处需要修补, 不同环境不一定一致)这样后, 我们就可以看到只和 example.com 这条 curl 命令相关的所有流程
 
 
+![[Pasted image 20260701202326.png]]
+
+这里的 No. 7, 8, 9 是我们shu'c
