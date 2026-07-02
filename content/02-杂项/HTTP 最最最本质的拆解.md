@@ -27,7 +27,7 @@ sudo tcpdump -i en0 -s 0 -w ~/http_capture.pcap 'port 80'
   - `-w ~/http_capture.pcap` — 写到文件
   - `'port 80'` — BPF 过滤，只看 HTTP 流量
 
-![](https://img.486597.xyz/img/Pasted%20image%2020260701201417.png)
+![333](https://img.486597.xyz/img/Pasted%20image%2020260701201417.png)
 
 ### 终端 B — 发起请求
 
@@ -101,7 +101,7 @@ No16到 No18, 是四次挥手的过程, 一个标注的四次挥手流程如下:
 
 点进来后, 我们可以看到划分清晰的上下两块部分, 分别以红色和蓝色表示, 红色部分, 是我们打过去的请求, 下半部分的蓝色是服务器响应我们的内容, Show as 部分可以选择不同的显示格式, 同学们可以自行探索
 
-![[Pasted image 20260701204219.png]]
+![](https://img.486597.xyz/img/Pasted%20image%2020260701204219.png)
 
 接下来, 让我们深入四层来进行剖析(不记得的同学上去再看一眼是哪四层!)
 
@@ -109,7 +109,7 @@ No16到 No18, 是四次挥手的过程, 一个标注的四次挥手流程如下:
 
 > 网络接口层的传输单位是帧(frame)，IP层的传输单位是包(packet)，TCP层的传输单位是段(segment)，HTTP的传输单位则是消息或报文(message)。但这些名词并没有什么本质的区分，可以统称为数据包。
 
-![[Pasted image 20260701204755.png]]
+![](https://img.486597.xyz/img/Pasted%20image%2020260701204755.png)
 
 然后我们双击 WireShark 中的 No10 请求, 进入这个界面, 我们在上半部分选中的内容, 在下面的十六进制报文中可以同步高亮, 这里有五个折叠块, 从上到下依次是:
 
@@ -127,7 +127,7 @@ No16到 No18, 是四次挥手的过程, 一个标注的四次挥手流程如下:
 
 ### ① 应用层（Application Layer）
 图中点亮的是应用层, 可以看到应用数据, 放在我们所有请求的最后, 我们要开始发送了, 接下来, 我们将从发送的角度, 从应用层, 逐步深入到传输层, 到网络层, 再到网络接口层, 逐层看看里面经历了什么
-![[Pasted image 20260702213722.png]]
+![](https://img.486597.xyz/img/Pasted%20image%2020260702213722.png)
 ### ② 传输层（Transport Layer）
 
 现在我们进入了传输层, 这里也是字段最多的一层, 让我们来一个个看看:
@@ -140,7 +140,7 @@ No16到 No18, 是四次挥手的过程, 一个标注的四次挥手流程如下:
 - **Calculated window size**: WireShark 帮我们计算的真正的接收窗口大小, 是基础接收窗口大小\*放大因子, 即 Window size scaling factor: 64
 - **Checksum**: 校验和。用来检查整个 TCP 头部和数据在网线传输过程中有没有因为电磁干扰、丢包而导致二进制位发生反转（从 0 变成 1）, 此处不做详细赘述
 
-![[Pasted image 20260702203519.png]]
+![](https://img.486597.xyz/img/Pasted%20image%2020260702203519.png)
 
 ### ③ 网络层（Network Layer）
 
@@ -152,7 +152,7 @@ No16到 No18, 是四次挥手的过程, 一个标注的四次挥手流程如下:
 - **Time to Live**: TTL, 每经过一个路由器会自减 1 防止数据包在网络中陷入无限死循环
 - **Differentiated Services Field**: 这个字段是表示这个包被处理的优先级, 可以让路由器决定拥堵时, 谁先走, 谁后走
 
-![[Pasted image 20260702203555.png]]
+![](https://img.486597.xyz/img/Pasted%20image%2020260702203555.png)
 
 ### ④ 网络接口层（Network Interface Layer）
 
@@ -162,4 +162,4 @@ No16到 No18, 是四次挥手的过程, 一个标注的四次挥手流程如下:
 - **Src(Source)**: 我们使用的本地的网卡的 MAC 地址
 - **Type**: IPv4, 告诉当对方接收我们的数据时, 我们里面包裹的内容是一个 IPv4 的网络层数据包
 
-![[Pasted image 20260702203623.png]]
+![](https://img.486597.xyz/img/Pasted%20image%2020260702203623.png)
