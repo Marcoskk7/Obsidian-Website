@@ -85,7 +85,7 @@ No16到 No18, 是四次挥手的过程, 一个标注的四次挥手流程如下:
 - Dst: 目标 IP, 图中是 172.66.147.243, 这是 example.com 在经过 DNS 解析后, 找到的对应服务器的公网 IP
 - Protocol: 传输层使用的协议是 TCP 协议
 - Time to Live: TTL, 没经过一个路由器会自减 1 防止数据包在网络中陷入无限死循环
-- Differentiated Services Field: 这个
+- Differentiated Services Field: 这个字段是表示这个包被处理的优先级, 可以让路由器决定yong'du
 ![[Pasted image 20260702203555.png]]
 
 
