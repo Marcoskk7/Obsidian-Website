@@ -81,7 +81,7 @@ No16到 No18, 是四次挥手的过程, 一个标注的四次挥手流程如下:
 - Source Port: 表示我们从 65025端口 发出的这个请求
 - Destination Port: 表示我们请求对方 80 端口上的服务
 - Sequence Number & Acknowledgement Number:1 表示前面的三次握手已经顺利完成, 这里是建立连接成功后的第一条有有效信息的包
--  Flags: ACK 代表确认收到服务器之前的响应, PSH(push), 是命令服务器, 不要让这个数据包在操作系统的缓冲区排队了, 已经是完整的 HTTP 请求了, 感觉你交给 Nginx 等业务程序去处理!
+-  Flags: ACK 代表确认收到服务器之前的响应, PSH(push), 是命令服务器, 不要让这个数据包在操作系统的缓冲区排队了, 已经是完整的 HTTP 请求了, 赶紧交给 Nginx 等业务程序去处理!
 - Window: 基础接收窗口大小
 - Calculated window size: WireShark 帮我们计算的真正的接收窗口大小, 是基础接收窗口大小\*放大因子, 即 Window size scaling factor: 64
 - Checksum: 校验和。用来检查整个 TCP 头部和数据在网线传输过程中有没有因为电磁干扰、丢包而导致二进制位发生反转（从 0 变成 1）, 此处不做详细赘述
@@ -92,7 +92,7 @@ No16到 No18, 是四次挥手的过程, 一个标注的四次挥手流程如下:
 - Src: 源 IP, 图中是 192.168.11.136, 是我们在局域网内的私网 IP
 - Dst: 目标 IP, 图中是 172.66.147.243, 这是 example.com 在经过 DNS 解析后, 找到的对应服务器的公网 IP
 - Protocol: 传输层使用的协议是 TCP 协议
-- Time to Live: TTL, 没经过一个路由器会自减 1 防止数据包在网络中陷入无限死循环
+- Time to Live: TTL, 每经过一个路由器会自减 1 防止数据包在网络中陷入无限死循环
 - Differentiated Services Field: 这个字段是表示这个包被处理的优先级, 可以让路由器决定拥堵时, 谁先走, 谁后走
 ![[Pasted image 20260702203555.png]]
 
