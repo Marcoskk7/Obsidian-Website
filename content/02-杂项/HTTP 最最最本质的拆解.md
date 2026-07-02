@@ -80,7 +80,7 @@ No16到 No18, 是四次挥手的过程, 一个标注的四次挥手流程如下:
 现在我们进入了传输层, 这里也是字段最多的一层, 让我们来一个个看看:
 - Source Port: 表示我们从 65025端口 发出的这个请求
 - Destination Port: 表示我们请求对方 80 端口上的服务
-- Sequence Number & Acknowledgement Number:1 
+- Sequence Number & Acknowledgement Number:1 表示前面的三次握手已经顺利完成, 这里是建立连接成功后的
 
 ![[Pasted image 20260702203519.png]]
 
