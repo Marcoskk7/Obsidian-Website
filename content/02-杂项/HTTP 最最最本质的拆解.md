@@ -81,7 +81,7 @@ No16到 No18, 是四次挥手的过程, 一个标注的四次挥手流程如下:
 - Source Port: 表示我们从 65025端口 发出的这个请求
 - Destination Port: 表示我们请求对方 80 端口上的服务
 - Sequence Number & Acknowledgement Number:1 表示前面的三次握手已经顺利完成, 这里是建立连接成功后的第一条有有效信息的包
--  Flags: 
+-  Flags: ACK 代表确认收到服务器之前的响应, PSH(push), 是命令
 
 ![[Pasted image 20260702203519.png]]
 
