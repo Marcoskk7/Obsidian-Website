@@ -27,7 +27,7 @@ sudo tcpdump -i en0 -s 0 -w ~/http_capture.pcap 'port 80'
   - `-w ~/http_capture.pcap` — 写到文件
   - `'port 80'` — BPF 过滤，只看 HTTP 流量
 
-![[Pasted image 20260701201417.png]]
+![](https://img.486597.xyz/img/Pasted%20image%2020260701201417.png)
 
 ### 终端 B — 发起请求
 
@@ -35,7 +35,7 @@ sudo tcpdump -i en0 -s 0 -w ~/http_capture.pcap 'port 80'
 curl http://example.com/
 ```
 
-![[Pasted image 20260701201427.png]]
+![](https://img.486597.xyz/img/Pasted%20image%2020260701201427.png)
 
 可以看到, 这里获取到了对应网页的数据, 此时可以使用 ctrl+c 关闭终端 A
 
@@ -47,7 +47,7 @@ curl http://example.com/
 
 然后在输入框中输入 `tcp.stream eq 0`(此处需要修补, 不同环境不一定一致)这样后, 我们就可以看到只和 example.com 这条 curl 命令相关的所有流程
 
-![[Pasted image 20260701202326.png]]
+![](https://img.486597.xyz/img/Pasted%20image%2020260701202326.png)
 
 ---
 
@@ -93,11 +93,11 @@ No16到 No18, 是四次挥手的过程, 一个标注的四次挥手流程如下:
 
 这里我们先看看TCP/IP 网络分为这四层, 我们记牢这个架构, 后续的环环都会相扣在这个上面
 
-![[Pasted image 20260701203700.png]]
+![](https://img.486597.xyz/img/Pasted%20image%2020260701203700.png)
 
 来, 我们继续 WireShark 中的操作吧! 可以看到 No10 的包的协议是 HTTP 的, 我们以这个数据包来进行展开
 
-![[Pasted image 20260701204059.png]]
+![](https://img.486597.xyz/img/Pasted%20image%2020260701204059.png)
 
 点进来后, 我们可以看到划分清晰的上下两块部分, 分别以红色和蓝色表示, 红色部分, 是我们打过去的请求, 下半部分的蓝色是服务器响应我们的内容, Show as 部分可以选择不同的显示格式, 同学们可以自行探索
 
