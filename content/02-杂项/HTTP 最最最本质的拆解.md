@@ -83,7 +83,7 @@ No16到 No18, 是四次挥手的过程, 一个标注的四次挥手流程如下:
 - Sequence Number & Acknowledgement Number:1 表示前面的三次握手已经顺利完成, 这里是建立连接成功后的第一条有有效信息的包
 -  Flags: ACK 代表确认收到服务器之前的响应, PSH(push), 是命令服务器, 不要让这个数据包在操作系统的缓冲区排队了, 已经是完整的 HTTP 请求了, 感觉你交给 Nginx 等业务程序去处理!
 - Window: 基础接收窗口大小
-- Calculated window size: WireShark 帮我们计算的真正的 接受能力, 
+- Calculated window size: WireShark 帮我们计算的真正的接收窗口大小, 是基础接收窗口大小\*放大因子, 即 Window size scaling factor: 64
 - 
 
 ![[Pasted image 20260702203519.png]]
