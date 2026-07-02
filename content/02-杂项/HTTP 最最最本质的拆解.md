@@ -80,4 +80,9 @@ No16到 No18, 是四次挥手的过程, 一个标注的四次挥手流程如下:
 
 ![[Pasted image 20260702203519.png]]
 
-![[Pasted image 20260702203555.png]]![[Pasted image 20260702203623.png]]
+![[Pasted image 20260702203555.png]]
+
+
+
+
+![[Pasted image 20260702203623.png]]
