@@ -84,5 +84,8 @@ No16到 No18, 是四次挥手的过程, 一个标注的四次挥手流程如下:
 
 
 
-现在我们到达了网络接口层, 可以看到三个关键字段, 分别是 Dst(Destination), 表示目的 MAC 地址, 这里的目的 MAC 地址不是example.com 的服务器的, 而是当前我本地连接的 WIFI 的, 网关的 MAC 地址, 因为数据包要出ju'yu
+现在我们到达了网络接口层, 可以看到三个关键字段, 分别是
+- Dst(Destination), 表示目的 MAC 地址, 这里的目的 MAC 地址不是example.com 的服务器的, 而是当前我本地连接的 WIFI 的, 网关的 MAC 地址, 因为数据包要出局域网, 必须先交由路由器来进行转发
+- Src(Source): 我们使用的本地的网卡的 MAC 地址
+- Type: IPv4, 表示我们走的是 IPv4
 ![[Pasted image 20260702203623.png]]
