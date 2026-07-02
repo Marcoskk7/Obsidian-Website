@@ -18,4 +18,5 @@
 前置学习:
 AI Agent的沙箱是什么？它和Docker容器/虚拟机有什么区别[https://www.bilibili.com/video/BV14sorBiEgP](https://www.bilibili.com/video/BV14sorBiEgP)
 
-虚拟机, 是通过物理裸金属机器, 一个个虚拟划分的, 每个有独立的操作系统
+虚拟机, 是通过物理裸金属机器, 一个个虚拟划分的, 每个有完整的操作系统和应用程序, 因此启动较为缓慢
+那么容器, 可以运行在虚拟机中, 本质就是一个个进程, 把
