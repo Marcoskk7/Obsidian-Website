@@ -4,4 +4,5 @@ https://github.com/zainnab-sparq/cc-self-train
 
 记忆中, 分为 CLAUDE.md, CLAUDE.local.md 以及 .claude/rules, 可以根据 指定不同paths 的 frontmatter, 来生效在不同路径下的 rules
 
-skills 的使用很有讲究, 可以s
+skills 的使用很有讲究, 可以设定如下几种:
+context: fork 表示当 agent 通过 skill 调用时, 走后台启动, 而不占用主会话
