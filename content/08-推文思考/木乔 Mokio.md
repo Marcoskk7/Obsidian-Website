@@ -3,5 +3,5 @@
 2. 学会Debug
 3. 行动力, 必须实际行动
 Prompt 怎么设计:
-Role+Context+细化的核心xu'qi
+Role(你是一个 xx)+Context(我现在掌握了什么)+细化的核心需求
 ## 春招打法
