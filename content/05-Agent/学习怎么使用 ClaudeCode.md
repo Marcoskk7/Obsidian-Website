@@ -15,3 +15,4 @@ hook:
 在配置 hook 的时候, 可以配置 type:prompt, command等, 来表明当前 hook 是怎么使用的, 示例中的 hook, 可以告诉 read 哪个文件的时候, 注入什么上下文(必须读什么文件), 也可以 hook 一下每个文件头, 加入一些 metadata
 
 task: 此功能主要区分于 todo-list 的点是可以描述出 dependency 依赖, 比如 taskitem2 实际上依赖于 taskitem1, taskitem3 和 taskitem4 可以并行
+使用 ctrl+T 可以看到目前
