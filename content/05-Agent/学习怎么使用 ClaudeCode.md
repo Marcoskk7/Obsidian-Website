@@ -10,3 +10,6 @@ skills 的使用很有讲究, 可以设定如下几种:
 - skillOverrides : 控制哪些 skill 对 Claude 可见。值：off（完全隐藏）、user-invocable-only（仅你手动调用可见）、name-only（仅名称可见，省描述占用的 token）。
   
 - disable-model-invocation: true, 设置只能手动触发不能模型自动触发
+
+hook:
+在配置 hook 的时候, 可以配置 type:prompt, command等, 来表明当前 hook 是怎么使用的, 示例中的 hook, 可以告诉 read 哪个文件的时候, 注入什么上下文(必须读什么文件), 也可以 hook 一下每个文件头, 加入一些 metadata
