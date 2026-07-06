@@ -16,3 +16,6 @@ hook:
 
 task: 此功能主要区分于 todo-list 的点是可以描述出 dependency 依赖, 比如 taskitem2 实际上依赖于 taskitem1, taskitem3 和 taskitem4 可以并行
 使用 ctrl+T 可以看到目前有哪些 task
+
+claude -w 可以新建一个 worktree, 在这个上面快速进行新的开发
+
