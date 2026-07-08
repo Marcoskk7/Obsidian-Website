@@ -67,3 +67,10 @@ type Tool struct {
     Arguments any    `json:"arguments,omitempty"`
     Result    any    `json:"result,omitempty"`
 }
+
+EvalCase = 一道题
+Invocation = 这道题里的一轮对话/调用
+Tool = 这一轮里发生的工具调用
+EvalMetric = 判卷规则
+EvalCaseResult = 一道题的判卷结果
+EvaluationResult = Evaluate 返回的总报告
