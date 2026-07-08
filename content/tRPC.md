@@ -49,4 +49,21 @@ ActualConversation：实际运行出来的对话内容
 SessionInput：初始化 session 的数据
 Rubrics：这条 case 自己的评分细则
 
->Invocation 表示一个
+>Invocation 表示一个 turn
+
+Invocation
+  UserContent: "北京今天温度多少？"
+  Tools:
+    - Name: "weather_tool"
+      Arguments: {"city": "北京"}
+      Result: {"temperature": "28°C"}
+  FinalResponse: "北京今天 28°C"
+  
+> Tool 表示一次工具调用
+
+type Tool struct {
+    ID        string `json:"id,omitempty"`
+    Name      string `json:"name,omitempty"`
+    Arguments any    `json:"arguments,omitempty"`
+    Result    any    `json:"result,omitempty"`
+}
