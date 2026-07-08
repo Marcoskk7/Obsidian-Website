@@ -48,3 +48,5 @@ Conversation：期望对话内容
 ActualConversation：实际运行出来的对话内容
 SessionInput：初始化 session 的数据
 Rubrics：这条 case 自己的评分细则
+
+>Invocation 表示一个
