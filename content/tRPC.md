@@ -13,8 +13,5 @@ EvalSetResult：一整个评测集的结果
 EvalCaseResult：一条评测用例的结果
 EvalMetricResult：某个 metric 的评测结果
 
-EvalSet
-  -> EvalCase
-    -> EvalMetric
-      -> EvalCaseResult
-        -> EvalMetricResult
+输入是一组 cases + metrics
+输出是一组 case results + metric results
