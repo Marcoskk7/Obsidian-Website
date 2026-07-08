@@ -38,3 +38,13 @@ llm_rubric_response
 llm_rubric_critic
 llm_rubric_knowledge_recall
 llm_hallucinations
+
+> EvalCase 表示一条评测样例。
+
+EvalID：这条 case 的唯一 ID
+EvalMode：评测模式
+ContextMessages：额外上下文
+Conversation：期望对话内容
+ActualConversation：实际运行出来的对话内容
+SessionInput：初始化 session 的数据
+Rubrics：这条 case 自己的评分细则
