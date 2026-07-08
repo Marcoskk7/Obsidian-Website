@@ -6,4 +6,5 @@ replace 关键字会用本地的路径代替远端路径, 这样本地的修改,
 
 CI 脚本测试仓库核心 module，排除 examples/docs/test/resource
 
-![[Pasted image 20260708230315.png]]
+![image.png](https://img.486597.xyz/img/20260708230340243.png)
+ 这里的 json 意思是, 怎么处理序列化和反序列化, 表明在 json 时叫什么内容, omitempty 是表示支持空传
