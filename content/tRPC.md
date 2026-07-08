@@ -8,3 +8,13 @@ CI 脚本测试仓库核心 module，排除 examples/docs/test/resource
 
 ![image.png](https://img.486597.xyz/img/20260708230340243.png)
  这里的 json 意思是, 怎么处理序列化和反序列化, 表明在 json 时叫什么内容, omitempty 是表示支持空传
+ 
+EvalSetResult：一整个评测集的结果
+EvalCaseResult：一条评测用例的结果
+EvalMetricResult：某个 metric 的评测结果
+
+EvalSet
+  -> EvalCase
+    -> EvalMetric
+      -> EvalCaseResult
+        -> EvalMetricResult
