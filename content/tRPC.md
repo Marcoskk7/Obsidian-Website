@@ -5,3 +5,5 @@ go.mod 中的 indirect 模块, 表示的是项目直接依赖的依赖, 因此�
 replace 关键字会用本地的路径代替远端路径, 这样本地的修改, 会直接应用
 
 CI 脚本测试仓库核心 module，排除 examples/docs/test/resource
+
+![[Pasted image 20260708230315.png]]
