@@ -16,7 +16,7 @@ EvalMetricResult：某个 metric 的评测结果
 输入是一组 cases + metrics
 输出是一组 case results + metric results
 
-Metric 定义的是成功的标准
+Metric 定义的是成功的标准, 比如这里我们定义两个, 一个是最后结果正确, 一个是工具调用路径正确, 或
 ```
 EvalMetric{
     MetricName: "final_response_match",
