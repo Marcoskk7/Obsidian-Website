@@ -15,3 +15,18 @@ EvalMetricResult：某个 metric 的评测结果
 
 输入是一组 cases + metrics
 输出是一组 case results + metric results
+
+Metric 定义的是成功的标准
+```
+EvalMetric{
+    MetricName: "final_response_match",
+    EvaluatorName: "finalresponse",
+    Threshold: 1.0,
+}
+
+EvalMetric{
+    MetricName: "tool_trajectory_match",
+    EvaluatorName: "tooltrajectory",
+    Threshold: 1.0,
+}
+```
