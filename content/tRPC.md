@@ -30,3 +30,11 @@ EvalMetric{
     Threshold: 1.0,
 }
 ```
+
+真实使用的: 
+final_response_avg_score
+tool_trajectory_avg_score
+llm_rubric_response
+llm_rubric_critic
+llm_rubric_knowledge_recall
+llm_hallucinations
