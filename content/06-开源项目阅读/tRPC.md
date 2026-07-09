@@ -80,3 +80,4 @@ evaluation_test.go展示了未来我们可能要用到的测试套路:
 2. 用 fakeService 预设评测结果
 3. 调用 Evaluate
 4. 断言聚合结果、调用次数、状态、分数
+per-case delta, 表示改变前后 ,我们的result的变化, 是 fail->success 还是 succeess->fail
