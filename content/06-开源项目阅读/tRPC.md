@@ -128,4 +128,18 @@ type Invocation struct {
     llmCallCount int
     toolIterationCount int
 }
+
+当前 Agent 是谁：Agent / AgentName
+这次调用 ID：InvocationID
+多 Agent 调用链：Branch / ParentMetadata
+当前会话：Session / SessionService
+当前输入消息：Message
+当前模型：Model
+运行配置：RunOptions
+插件：Plugins
+结构化输出配置：StructuredOutput
+长期记忆服务：MemoryService
+Artifact 服务：ArtifactService
+本次 invocation 临时状态：state
+调用限制：MaxLLMCalls / MaxToolIterations
 ```
