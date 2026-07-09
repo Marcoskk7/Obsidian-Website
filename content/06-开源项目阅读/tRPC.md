@@ -155,3 +155,6 @@ Agent.Run 是具体智能体的一次执行逻辑。
 - 把当前 user message 写入 session
 - 运行后把 assistant/tool 事件写回 session
 - 管理 requestID / cancel / tracing / plugins
+
+怎么比较期望的 Tooltrajectory 和真实运行的 Tooltrajectory 的?
+首先定义好 case, set 和 metric, 然后我们跑 tool 进行 match 比较, 在 examples 中的bi'jia
