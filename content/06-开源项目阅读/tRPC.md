@@ -158,3 +158,5 @@ Agent.Run 是具体智能体的一次执行逻辑。
 
 怎么比较期望的 Tooltrajectory 和真实运行的 Tooltrajectory 的?
 首先定义好 case, set 和 metric, 然后我们跑 tool 进行 match 比较, 在 examples 中的比较, 首先检查工具数量, 一定要>=预期数量(因为可以比预期的多), 其次是比较每个 tool 的 metric 是否符合要求, 在这个场景中, 设定的 metric 是 name, arguments 和 result
+
+匹配的 strategy 涉及到比如说是否忽略工具调用顺序, 是否包含 subset 等
