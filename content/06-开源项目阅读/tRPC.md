@@ -143,3 +143,10 @@ Artifact 服务：ArtifactService
 本次 invocation 临时状态：state
 调用限制：MaxLLMCalls / MaxToolIterations
 ```
+
+```
+Runner.Run 是用户入口和生命周期管理器；
+Agent.Run 是具体智能体的一次执行逻辑。
+```
+
+`生命周期` 这个词这里指：一次请求从开始到结束，谁创建资源、谁传递上下文、谁处理事件、谁清理资源. 比如说 Runner.Run 这里就管理了
