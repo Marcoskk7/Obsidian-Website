@@ -74,3 +74,5 @@ Tool = 这一轮里发生的工具调用
 EvalMetric = 判卷规则
 EvalCaseResult = 一道题的判卷结果
 EvaluationResult = Evaluate 返回的总报告
+
+Evaluation
