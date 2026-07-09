@@ -93,3 +93,39 @@ fakeService 对 #2003 重要，是因为它支持无 API Key、无随机性、�
 超时控制
 跨调用传递请求级信息
 ```
+
+agent.Invocation 存这些信息:
+```
+type Invocation struct {
+    Agent Agent
+    AgentName string
+    InvocationID string
+    Branch string
+    ParentMetadata *ParentInvocationMetadata
+    EndInvocation bool
+
+    Session *session.Session
+    SessionService session.Service
+
+    Model model.Model
+    Message model.Message
+    RunOptions RunOptions
+    TransferInfo *TransferInfo
+
+    Plugins PluginManager
+
+    StructuredOutput *model.StructuredOutput
+    StructuredOutputType reflect.Type
+
+    MemoryService memory.Service
+    ArtifactService artifact.Service
+
+    state map[string]any
+
+    MaxLLMCalls int
+    MaxToolIterations int
+
+    llmCallCount int
+    toolIterationCount int
+}
+```
