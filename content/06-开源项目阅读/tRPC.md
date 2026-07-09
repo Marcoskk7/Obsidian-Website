@@ -83,3 +83,5 @@ evaluation_test.go展示了未来我们可能要用到的测试套路:
 
 per-case delta, 表示改变前后 ,我们的result的变化, 是 fail->success 还是 succeess->fail
 acceptance gate 表示是不是接受, 超过阈值吗
+
+fakeService 对 #2003 重要，是因为它支持无 API Key、无随机性、可重复地测试baseline/candidate 对比、逐 case 差异、接受门禁和报告生成这些工程逻辑。
