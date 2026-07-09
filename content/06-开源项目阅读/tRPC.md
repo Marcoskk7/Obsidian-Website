@@ -149,4 +149,9 @@ Runner.Run 是用户入口和生命周期管理器；
 Agent.Run 是具体智能体的一次执行逻辑。
 ```
 
-`生命周期` 这个词这里指：一次请求从开始到结束，谁创建资源、谁传递上下文、谁处理事件、谁清理资源. 比如说 Runner.Run 这里就管理了
+`生命周期` 这个词这里指：一次请求从开始到结束，谁创建资源、谁传递上下文、谁处理事件、谁清理资源. 比如说 Runner.Run 这里就管理了:
+- 根据 appName/userID/sessionID 查 session
+- 不存在就创建 session
+- 把当前 user message 写入 session
+- 运行后把 assistant/tool 事件写回 session
+- 管理 requestID / cancel / tracing / plugins
