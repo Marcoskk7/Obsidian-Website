@@ -161,4 +161,4 @@ Agent.Run 是具体智能体的一次执行逻辑。
 
 匹配的 strategy 涉及到比如说是否忽略工具调用顺序, 是否包含 subset 等
 toolMock 适合 mock 这些: 天气、新闻、搜索、时间、票务、数据库、远程 API、模型调用,
-有两种匹配结果 mock 方式, 一个是根据 name, 一个是根据 name+arguments, 必须要 name 和 arguments 都对, 才 mock Toolcall result, 那么, 为什么要做这么一个操作, 明明 name 和 arguments 都对了, 那么 result 不一定是一样的吗? 
+有两种匹配结果 mock 方式, 一个是根据 name, 一个是根据 name+arguments, 必须要 name 和 arguments 都对, 才 mock Toolcall result, 那么, 为什么要做这么一个操作, 明明 name 和 arguments 都对了, 那么 result 不一定是一样的吗? 这里就要区分了, 有的 toolcall 是一样的, 比如计算器, 但是如果查天气, 使用同样的 city , 在不同的时间查, 得到的 result 就有可能不一致了
