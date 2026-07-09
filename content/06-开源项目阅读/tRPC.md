@@ -75,4 +75,8 @@ EvalMetric = 判卷规则
 EvalCaseResult = 一道题的判卷结果
 EvaluationResult = Evaluate 返回的总报告
 
-Evaluation
+evaluation_test.go展示了未来我们可能要用到的测试套路:
+1. 用 inmemory manager 准备数据
+2. 用 fakeService 预设评测结果
+3. 调用 Evaluate
+4. 断言聚合结果、调用次数、状态、分数
