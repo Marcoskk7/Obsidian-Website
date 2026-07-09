@@ -85,3 +85,11 @@ per-case delta, 表示改变前后 ,我们的result的变化, 是 fail->success 
 acceptance gate 表示是不是接受, 超过阈值吗
 
 fakeService 对 #2003 重要，是因为它支持无 API Key、无随机性、可重复地测试baseline/candidate 对比、逐 case 差异、接受门禁和报告生成这些工程逻辑。
+
+`ctx context.Context` 主要解决这些问题：
+
+```
+取消执行
+超时控制
+跨调用传递请求级信息
+```
