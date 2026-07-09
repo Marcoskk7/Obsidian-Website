@@ -157,4 +157,4 @@ Agent.Run 是具体智能体的一次执行逻辑。
 - 管理 requestID / cancel / tracing / plugins
 
 怎么比较期望的 Tooltrajectory 和真实运行的 Tooltrajectory 的?
-首先定义好 case, set 和 metric, 然后我们跑 tool 进行 match 比较, 在 examples 中的bi'jia
+首先定义好 case, set 和 metric, 然后我们跑 tool 进行 match 比较, 在 examples 中的比较, 首先检查工具数量, 一定要>=预期数量(因为可以比预期的多), 其次
