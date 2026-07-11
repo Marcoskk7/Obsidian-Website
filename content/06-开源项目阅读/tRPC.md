@@ -177,3 +177,12 @@ EvalSet
         └── Tools[]        // 预期工具调用
 
 如果要查看预期工具调用, 就在 EvalSet.EvalCases[i].Conversation[j].Tools 字段中
+
+
+EvalCaseResults[]
+└── EvalMetricResultPerInvocation[]
+    └── ActualInvocation
+        └── Tools[]
+            ├── Name
+            ├── Arguments
+            └── Result
