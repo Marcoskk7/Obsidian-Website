@@ -167,3 +167,4 @@ toolMock 适合 mock 这些: 天气、新闻、搜索、时间、票务、数据
 Session Memory & Knowledge
 
 其中 session 的隔离维度是 appName+userID+sessionID
+memory 的隔离维度是 appName+userID
