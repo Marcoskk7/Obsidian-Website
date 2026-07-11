@@ -168,3 +168,12 @@ Session Memory & Knowledge
 
 其中 session 的隔离维度是 appName+userID+sessionID
 memory 的隔离维度是 appName+userID
+
+EvalSet
+└── EvalCases[]
+    └── Conversation[]
+        ├── UserContent
+        ├── FinalResponse  // 预期回答
+        └── Tools[]        // 预期工具调用
+
+如果要查看预期工具调用, 就在 EvalSet.EvalCases[i].Conversation[j].Tools 字段中
