@@ -1,5 +1,4 @@
 
 拓展问答:
 1. 你的 functioncall 怎么保证准确率?
-- 怎么量化正确率
-- schema 设计不清晰, prompt 或者上下文不清晰,   
+答: 做了动态路由+prompt 调优(给出正反例), badcase 收敛入memory, 
