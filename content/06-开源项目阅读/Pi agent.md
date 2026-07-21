@@ -4,4 +4,4 @@
 bash, read, edit, write
 
 只读模式下:
-因为没有
+有 grep, ls , find, read, 但是不给edit 和 write
