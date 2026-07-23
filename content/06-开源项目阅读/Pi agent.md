@@ -5,3 +5,6 @@ bash, read, edit, write
 
 只读模式下:
 有 grep, ls , find, read, 但是不给edit 和 write
+
+会话存储格式为 JsonL 格式
+
