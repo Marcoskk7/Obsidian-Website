@@ -202,4 +202,4 @@ type Service interface {
     Close()
 }
 
-其中 clear 是删除一个用户的全部相关 memory, 而不是一条一条进行清理, close 是用于q
+其中 clear 是删除一个用户的全部相关 memory, 而不是一条一条进行清理, close 是用于清理资源的
