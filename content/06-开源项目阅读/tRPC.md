@@ -209,7 +209,8 @@ type Service interface {
 WithTools = 给 LLM 看见工具
 WithMemoryService = 给工具运行时提供后端
 
-测评模式存储位置, 普通模式需要真实运行
+测评模式存储位置, 普通模式需要真实运行 Agent, 而 trace 模式使用的是旧的已经生成好的对话, 适合重放历史线上事故的对话, 而不用重新调用 Agent
+
 actuals   ← Runner 的输出 (普通模式)
 actuals   ← EvalCase.ActualConversation(trace 模式)
 
