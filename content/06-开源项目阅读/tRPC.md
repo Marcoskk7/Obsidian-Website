@@ -203,3 +203,8 @@ type Service interface {
 }
 
 其中 clear 是删除一个用户的全部相关 memory, 而不是一条一条进行清理, close 是用于清理资源的
+
+
+在 simple memory 里，为什么既要 `WithTools(memoryService.Tools())`，又要 `WithMemoryService(memoryService)`？
+WithTools = 给 LLM 看见工具
+WithMemoryService = 给工具运行时提供后端
