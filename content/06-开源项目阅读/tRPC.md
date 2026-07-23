@@ -244,5 +244,4 @@ EvalResultManager.Save()
 ```
 
 
-issue 2003 必须覆盖的几种错误:'
-⚠️
+issue 2003 必须覆盖的几种错误:
