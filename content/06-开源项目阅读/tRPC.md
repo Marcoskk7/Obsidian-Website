@@ -218,3 +218,27 @@ expecteds ← EvalCase.Conversation
 
 ### 测评流程
 
+```
+evaluation.New()
+    ↓
+AgentEvaluator.Evaluate("math-basic")
+    ↓
+MetricManager 读取评分规则
+    ↓
+Service.Inference()
+    ├── Runner 执行 Agent
+    ├── 产生 actual Invocation
+    └── 收集 Trace
+    ↓
+Service.Evaluate()
+    ├── actuals = 推理结果
+    ├── expecteds = EvalSet.Conversation
+    ├── Registry 选择 Evaluator
+    └── Evaluator 比较并评分
+    ↓
+聚合多次运行
+    ↓
+EvalResultManager.Save()
+    ↓
+返回 EvaluationResult
+```
