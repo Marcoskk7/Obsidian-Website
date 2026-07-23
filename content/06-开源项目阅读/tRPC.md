@@ -208,3 +208,6 @@ type Service interface {
 在 simple memory 里，为什么既要 `WithTools(memoryService.Tools())`，又要 `WithMemoryService(memoryService)`？
 WithTools = 给 LLM 看见工具
 WithMemoryService = 给工具运行时提供后端
+
+actuals   ← Runner 的输出
+expecteds ← EvalCase.Conversation
