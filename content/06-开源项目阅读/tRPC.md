@@ -242,3 +242,7 @@ EvalResultManager.Save()
     ↓
 返回 EvaluationResult
 ```
+
+
+issue 2003 必须覆盖的几种错误:'
+⚠️
