@@ -209,5 +209,8 @@ type Service interface {
 WithTools = 给 LLM 看见工具
 WithMemoryService = 给工具运行时提供后端
 
-actuals   ← Runner 的输出
+测评模式存储位置
+actuals   ← Runner 的输出 (普通模式)
+actuals   ← EvalCase.ActualConversation(trace 模式)
+
 expecteds ← EvalCase.Conversation
