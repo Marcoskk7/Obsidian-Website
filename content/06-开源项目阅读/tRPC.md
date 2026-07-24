@@ -246,7 +246,30 @@ EvalResultManager.Save()
 
 issue 2003 必须覆盖的几种错误:
 
-profile 存的是不同surface
+profile 存的是不同 surface 被替换为什么
 text gradient 是自然语言描述怎么修改
 aggregation 是把多个 case 对于同一 surface 的修改建议进行合并
-patch 是真正可用的最终文本
+patch 是真正可用的最终文本, 为 optimizer 生成的修改
+
+### 提示词优化的流程
+```
+InputProfile
+    ↓
+Train evaluation
+    ↓
+Losses
+    ↓
+Backward
+    ↓
+Aggregation
+    ↓
+Patches
+    ↓
+OutputProfile
+    ↓
+Validation evaluation
+    ↓
+Acceptance
+    ↓
+Stop decision
+```
