@@ -246,6 +246,7 @@ EvalResultManager.Save()
 
 issue 2003 必须覆盖的几种错误:
 
-
+profile 存的是不同surface
+text gradient 是自然语言描述怎么修改
 aggregation 是把多个 case 对于同一 surface 的修改建议进行合并
 patch 是真正可用的最终文本
