@@ -283,4 +283,7 @@ Stop decision
 四个struct
 
 MetricResult
-MetricEvidence(Evidence 相比 result 会)
+MetricEvidence(Evidence 相比 result 会统计该 Metric 是否 passed, 而 result 制存评分的 threshold)
+
+CaseResult 记录MetricResult+Final
+CaseEvidence
