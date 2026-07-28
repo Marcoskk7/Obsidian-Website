@@ -285,5 +285,5 @@ Stop decision
 MetricResult
 MetricEvidence(Evidence 相比 result 会统计该 Metric 是否 passed, 而 result 制存评分的 threshold)
 
-CaseResult 记录MetricResult+Final
-CaseEvidence
+CaseResult 记录MetricResult+FinalResponse
+CaseEvidence 统计 CaseResult, 并记录是否 passed
