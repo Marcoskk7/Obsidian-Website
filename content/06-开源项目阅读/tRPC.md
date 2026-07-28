@@ -275,3 +275,12 @@ Stop decision
 ```
 真正的 Engine.Run()的流程是
 初始 profile->跑一遍验证集, score 作为 baseline->跑训练集, 拿到建议(梯度)->反向传播, 优化profile->优化过后的 profile 跑一遍验证集 -> 根据 Gate 或者 LLM Judge 来决定是会否接受
+
+
+
+### 第一课
+
+四个struct
+
+MetricResult
+MetricEvidence(Evidence 相比 result 会)
