@@ -15,4 +15,6 @@
 工具执行的权限审计:
 首先是提供的参数类型是否正确->
 参数是否合理(比如 file_read)的路径, 是否真实可访问, 而不仅仅是保证为一个字符串->
-pretool_hookl
+pretool_hook, 自定义一些 hook->
+权限审查, 用户的 deny/approve/ask->
+-执行
