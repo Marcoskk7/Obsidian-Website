@@ -287,3 +287,7 @@ MetricEvidence(Evidence 相比 result 会统计该 Metric 是否 passed, 而 res
 
 CaseResult 记录MetricResult+FinalResponse
 CaseEvidence 统计 CaseResult, 并记录是否 passed
+
+### 第二课
+
+证据归因的顺序, 由上至下,
