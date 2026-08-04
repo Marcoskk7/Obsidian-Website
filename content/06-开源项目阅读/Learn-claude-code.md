@@ -21,4 +21,4 @@ pretool_hook, 自定义一些 hook->
 
 # S3
 
-工具的审计包括si
+工具的审计包括四种, deny, ask, allow, passthrough(这里是交给工具自己定义批准, 检查规则)
