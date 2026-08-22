@@ -27,3 +27,7 @@ S4 (Hook)
 CC 的 Stop hooks 有一个防无限循环机制（`query.ts:212,1300`）：`stopHookActive` 状态字段。当 stop hooks 产生 blockingError 时，循环带 `stopHookActive: true` 重入下一轮。后续迭代中 stop hooks 看到这个标志就不会再次触发。这防止了一个永不停机的 bug：模型自纠后 stop hook 再次报错 → 模型再自纠 → stop hook 再报错...
 
 S5 (todo_write)
+CC 中有两套任务系统并存（`tasks.ts:133-139`）：
+
+- **TodoWrite（V1）**：一个简单的列表工具，数据在内存 AppState 中维护（`TodoWriteTool.ts:65-103`）。教学版也保存在进程内存里，退出后清空
+- **Task System（V2 = s12）**：文件持久化、依赖图、并发锁、ownership
