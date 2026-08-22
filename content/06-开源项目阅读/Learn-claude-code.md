@@ -34,4 +34,4 @@ CC 中有两套任务系统并存（`tasks.ts:133-139`）：
 
 依赖图, 是会有 blocked by, 比如 task2 可能依赖于 task1, 那么就 blocked by task1
 并发锁是防止同时写入相同文件
-ownership 是
+ownership 是防止子 Agent 争抢权限而设计的
