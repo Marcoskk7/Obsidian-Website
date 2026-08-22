@@ -31,3 +31,5 @@ CC 中有两套任务系统并存（`tasks.ts:133-139`）：
 
 - **TodoWrite（V1）**：一个简单的列表工具，数据在内存 AppState 中维护（`TodoWriteTool.ts:65-103`）。教学版也保存在进程内存里，退出后清空
 - **Task System（V2 = s12）**：文件持久化、依赖图、并发锁、ownership
+
+依赖图, 是会有 blocked by, 
