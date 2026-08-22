@@ -4,6 +4,9 @@
 - code-graph
 - skills
 
+可了解的其余开源项目: 
+- openviking
+- headroom
 
 分层记忆分为L0-L3
 
