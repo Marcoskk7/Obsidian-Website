@@ -33,4 +33,4 @@ A: 首先, 召回的只是语义相似, 不一定确实需要, 像是在一堆�
 
 
 那么 session init 的部分, 就是通过 team+agent+task 的部分来进行 init, 可以做资产绑定, 方便第二部进行资产召回,
-Proxy 管控的是 contextd
+> Proxy 管控的是 context 的组织, 而 core 管控的是核心的资产
