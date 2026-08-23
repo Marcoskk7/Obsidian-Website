@@ -32,4 +32,4 @@ A: 首先, 召回的只是语义相似, 不一定确实需要, 像是在一堆�
 ![image.png](https://img.486597.xyz/img/20260823184355111.png)
 
 
-那么 session init 的部分, 就是通过 team+agent+task 的部分来进行 init, 确认好一个
+那么 session init 的部分, 就是通过 team+agent+task 的部分来进行 init, 可以做资产绑定, 方便第二部进行资产召回
