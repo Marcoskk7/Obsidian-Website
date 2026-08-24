@@ -106,3 +106,5 @@ Skill 查询：
              → Core /v3/skill/search
              → SkillCore / Store
 在 memory core 中的 server.ts，它和在 memory proxy 中的 server.ts 最大的不同就是，它会负责更多内部业务逻辑上的内容。, 比方说，这个 skill 和 memory 都是在 proxy 侧注册的，是一个 bridge 路由。然后再从那里补充一些基础信息（如 Task team name 等），再转发到 core 这里来进行鉴权调用。
+
+`tdai-core.ts` 是记忆系统的统一编排入口，负责召回与搜索记忆、捕获并存储 L0 原始对话，以及触发后台流水线生成 L1 记忆、L2 场景和 L3 用户画像。
