@@ -90,3 +90,5 @@ pipeline.ts
         ▼
 handler.ts
 选择上游、发送请求、处理回执
+
+> pipeline 说白了就是把不同协议转换成统一 `AgentContext`，按顺序执行所有资产 Hook，把结果放进 System、Tools 或 User Message，再转换回原协议。
