@@ -109,3 +109,8 @@ Skill 查询：
 
 `tdai-core.ts` 是记忆系统的统一编排入口，负责召回与搜索记忆、捕获并存储 L0 原始对话，以及触发后台流水线生成 L1 记忆、L2 场景和 L3 用户画像。
 
+memorycore/src/core/store 定义 L0/L1/L2/L3 级别存储什么信息, 
+- L0 保存原始消息，核心字段是 Session、隔离身份、角色、消息正文和时间。
+- L1 保存抽取后的结构化记忆，除正文外还包含类型、优先级、场景、版本和来源 Session。
+- L2/L3 统一表示成 `ProfileRecord`：`type="l2"` 是场景资料，`type="l3"` 是更高层画像；二者按 Team 与 Agent 隔离，并带版本号。/Users/marcoskk7/github/TencentDB-Agent-Memory/MemoryCore/src/core/store/types.ts:265)
+- `IMemoryStore` 把写入、普通查询、向量检索、全文检索和 Profile 同步统一起来，上层不需要知道实际后端。[统一接口 (line 551)](/Users/marcoskk7/github/TencentDB-Agent-Memory/MemoryCore/src/core/store/types.ts:551)
