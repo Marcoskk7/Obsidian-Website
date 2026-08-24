@@ -122,3 +122,4 @@ source_type, source_ref, version, status, expires_at, confidence
 检索资产进入上下文:
 ACL 最先, 如果没权限, 那么根本不需要召回
 召回相关性, 是两路召回算法, BM25+语义相似, BM25 是要精确关键词匹配的, 而语义相似是神经网络上的 Embedding
+还有一个 token budget, 如果再引入新的
