@@ -78,3 +78,15 @@ analyse
 就是 marker。
 
 它不承载业务数据，只表示“本次请求启用某种特殊行为”。代码上, 我们可以拦截, 这些中间 marker, 然后在代码中做对应的处理, 
+handler.ts
+管理完整 HTTP 生命周期
+        │
+        │ 调用
+        ▼
+pipeline.ts
+只修改请求 Body
+        │
+        │ 返回 Modified Body
+        ▼
+handler.ts
+选择上游、发送请求、处理回执
