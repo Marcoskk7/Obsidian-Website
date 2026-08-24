@@ -116,4 +116,4 @@ memorycore/src/core/store 定义 L0/L1/L2/L3 级别存储什么信息,
 - `IMemoryStore` 把写入、普通查询、向量检索、全文检索和 Profile 同步统一起来，上层不需要知道实际后端。
 
 资产的重要字段:
-source_type, source_ref, version, status, expire_at
+source_type, source_ref, version, status, expires_at, confidence
