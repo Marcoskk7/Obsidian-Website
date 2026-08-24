@@ -117,3 +117,7 @@ memorycore/src/core/store 定义 L0/L1/L2/L3 级别存储什么信息,
 
 资产的重要字段:
 source_type, source_ref, version, status, expires_at, confidence
+
+
+检索资产进入上下文:
+ACL
