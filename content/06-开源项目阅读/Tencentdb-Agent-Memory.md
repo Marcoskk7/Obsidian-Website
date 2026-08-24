@@ -47,4 +47,34 @@ A: 首先, 召回的只是语义相似, 不一定确实需要, 像是在一堆�
 代码阅读:
 MemoryProxy:
 1. server.ts:
-	一切的入口, 负责注册路由, 实际业务逻辑处理交给 handler(不同的上游, 请求到不同handler), 提前连接状态存储, 包括COS, sqlite, fs, 进程内存
+	一切的入口, 负责注册路由, 实际业务逻辑处理交给 handler(不同的上游, 请求到不同handler), 提前连接状态存储, 包括COS, sqlite, fs, 进程内存, 以及检查 marker url:
+	### Marker
+
+例如普通请求：
+
+```
+/codebuddy/space-1/v1/chat/completions
+```
+
+带 Cost Guard marker：
+
+```
+/codebuddy/space-1/cost-guard/v1/chat/completions
+```
+
+带分析 marker：
+
+```
+/codebuddy/space-1/analyse/v1/chat/completions
+```
+
+其中：
+
+```
+cost-guard
+analyse
+```
+
+就是 marker。
+
+它不承载业务数据，只表示“本次请求启用某种特殊行为”。代码上, 我们可以拦截, 这些中间 marker, 然后在代码中做对应的处理, 
