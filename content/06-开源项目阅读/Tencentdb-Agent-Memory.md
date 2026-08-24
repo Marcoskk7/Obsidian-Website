@@ -92,3 +92,17 @@ handler.ts
 选择上游、发送请求、处理回执
 
 > pipeline 说白了就是把不同协议转换成统一 `AgentContext`，按顺序执行所有资产 Hook，把结果放进 System、Tools 或 User Message，再转换回原协议。
+
+
+MemoryCore:
+普通对话：
+CodeBuddy → Proxy /chat/completions
+          → Session + Injector
+          → 上游 LLM
+
+Skill 查询：
+模型执行 curl → Proxy /skill-bridge/v3/skill/search
+             → 补入 Session 身份
+             → Core /v3/skill/search
+             → SkillCore / Store
+在 memory core 中的 server.ts，它和在 memory proxy 中的 server.ts 最大的不同就是，它会负责更多内部业务逻辑上的内容。, 在比方说这个 skill 和这个 memory 都是在 proxy 侧注册的是一个 bridge 路由，然后再从那里补入一些基础信息，Task team name 什么的，再转发到 core 这里来进行
