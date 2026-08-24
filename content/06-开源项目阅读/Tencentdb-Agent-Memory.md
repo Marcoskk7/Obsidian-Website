@@ -105,4 +105,4 @@ Skill 查询：
              → 补入 Session 身份
              → Core /v3/skill/search
              → SkillCore / Store
-在 memory core 中的 server.ts，它和在 memory proxy 中的 server.ts 最大的不同就是，它会负责更多内部业务逻辑上的内容。, 在比方说这个 skill 和这个 memory 都是在 proxy 侧注册的是一个 bridge 路由，然后再从那里补入一些基础信息，Task team name 什么的，再转发到 core 这里来进行
+在 memory core 中的 server.ts，它和在 memory proxy 中的 server.ts 最大的不同就是，它会负责更多内部业务逻辑上的内容。, 比方说，这个 skill 和 memory 都是在 proxy 侧注册的，是一个 bridge 路由。然后再从那里补充一些基础信息（如 Task team name 等），再转发到 core 这里来进行鉴权调用。
