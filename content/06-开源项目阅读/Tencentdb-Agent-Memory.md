@@ -153,7 +153,7 @@ ACL 最先, 如果没权限, 那么根本不需要召回
  - ReMe —— 阿里 AgentScope 出品，"文件即记忆"，记忆对用户完全透明可直接编辑                     
  - memU —— 范式最激进：让记忆本身变成一个 24/7 后台主动 Agent              
  -  - MemOS v2.0.8：六层架构 + 三类记忆（文本 / 激活 / 参数），LoRA 记忆目前仍是 Placeholder 的真相                    
- - OpenViking：字节火山引擎的"上下文数据库"，文件系统隐喻 + L0/L1/L2 分层，Token 成本降低 92%~96% , 其实 OpenViking 的思路是组织一套虚拟的文件系统, 能够通过虚拟化的文件路径让 LLM 操作 Memory, 而 LLM 在训练的时候又见过大量这方面的语料, 因此这些操作对他来说更易于理解和使用
+ - OpenViking：字节火山引擎的"上下文数据库"，文件系统隐喻 + L0/L1/L2 分层，Token 成本降低 92%~96% , 其实 OpenViking 的思路是组织一套虚拟的文件系统, 能够通过虚拟化的文件路径让 LLM 操作 Memory, 而 LLM 在训练的时候又见过大量这方面的语料, 因此这些操作对他来说更易于理解和使用, 统一通过 viking://前缀, 分为 resources, user, 和 agent 三个中间路由来划分资源
  - Hindsight：LongMemEval SOTA，仿生三层记忆 + MPFP 图检索 + Consolidation 巩固引擎        
  - Second Me：本地训练"第二个你"，L0/L1/L2 知识蒸馏 + LoRA 微调，以及"100% 本地"的隐私悖论                       
  - MetaMem：不管存储只管"会不会用"，Learning to Learn 元记忆层 + Partial Correctness Filter   
