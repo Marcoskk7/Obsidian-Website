@@ -1,3 +1,8 @@
+
+要定义 Agent Memory, 核心是弄懂核心的三个维度, 也就是怎么存, 怎么注入回上下文, 怎么
+
+
+
 有四种 assets, 分别是
 - chat memory
 - llm-wiki
