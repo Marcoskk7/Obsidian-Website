@@ -158,4 +158,7 @@ ACL 最先, 如果没权限, 那么根本不需要召回
  - Second Me：本地训练"第二个你"，L0/L1/L2 知识蒸馏 + LoRA 微调，以及"100% 本地"的隐私悖论                       
  - MetaMem：不管存储只管"会不会用"，Learning to Learn 元记忆层 + Partial Correctness Filter   
 
+
+实现思路:
+首先每个资产可以有字段统计, 累计被召回的次数, 结合任务成功率进行测算, 就是召回的次数比上
                                                            
