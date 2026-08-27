@@ -1,5 +1,10 @@
 
-要定义 Agent Memory, 核心是弄懂核心的三个维度, 也就是怎么存, 怎么注入回上下文, 怎么
+要定义 Agent Memory, 核心是弄懂核心的三个维度, 也就是怎么存, 怎么注入回上下文, 怎么管理:
+1. What is it
+		a. txt, md
+		b.SQLite, 表格
+		c.graph, nodes, 通过图的方式存储
+2. How
 
 
 
