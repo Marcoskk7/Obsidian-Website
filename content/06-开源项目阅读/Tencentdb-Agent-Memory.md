@@ -10,9 +10,9 @@
 		3. BM25 关键词匹配召回(sqlite)
 		4. GraphRag
 3. How to maintain it?
-	1. 操作
-	2. 生命周期
-	3. 属性
+	1. 操作: 增删改查
+	2. 生命周期: 过期时间, 新版内容
+	3. 属性: trace_id, version 等
 	4. 
 
 
