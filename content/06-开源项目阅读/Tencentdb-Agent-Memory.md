@@ -10,7 +10,10 @@
 		3. BM25 关键词匹配召回(sqlite)
 		4. GraphRag
 3. How to maintain it?
-	1. 
+	1. 操作
+	2. 生命周期
+	3. 属性
+	4. 
 
 
 
