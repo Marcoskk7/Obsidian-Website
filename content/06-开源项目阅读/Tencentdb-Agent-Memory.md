@@ -142,3 +142,14 @@ source_type, source_ref, version, status, expires_at, confidence
 ACL 最先, 如果没权限, 那么根本不需要召回
 召回相关性, 是两路召回算法, BM25+语义相似, BM25 是要精确关键词匹配的, 而语义相似是神经网络上的 Embedding
 还有一个 token budget, 如果再引入新的
+
+
+
+
+其余 Memory 框架:
+ - Text2Mem —— 给所有记忆系统定义"操作指令集"，12 个原子操作 + 五元 JSON 契约 + 双层验证(这里za)
+ - Mem0 —— 当下 Star 最多的记忆中间件，5 个工厂 / 双存储 / 三种记忆类型，含真实成本瓶颈分析             
+ - Letta —— 把 OS 虚拟内存思想搬进 Agent，Git 版本化记忆 + Sleeptime 异步后台学习      
+ - ReMe —— 阿里 AgentScope 出品，"文件即记忆"，记忆对用户完全透明可直接编辑                     
+ - memU —— 范式最激进：让记忆本身变成一个 24/7 后台主动 Agent                                                               
+                                                           
