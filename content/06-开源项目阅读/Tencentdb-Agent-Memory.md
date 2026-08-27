@@ -4,7 +4,13 @@
 		a. txt, md
 		b.SQLite, 表格
 		c.graph, nodes, 通过图的方式存储
-2. How
+2. How to find it
+		1. 全量注入
+		2. rag 检索, 选择性召回
+		3. BM25 关键词匹配召回(sqlite)
+		4. GraphRag
+3. How to maintain it?
+	1. 
 
 
 
