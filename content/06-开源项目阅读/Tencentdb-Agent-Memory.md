@@ -186,8 +186,8 @@ ACL 最先, 如果没权限, 那么根本不需要召回
 
 ```bash
 export TDAI_GATEWAY_CONFIG="$PWD/tdai-gateway.standalone.yaml"
-export TDAI_LLM_API_KEY="your-api-key"
-export TDAI_LLM_BASE_URL="https://api.openai.com/v1"
+export TDAI_LLM_API_KEY="sk-5e629e0c72774e82add1a21d262822"
+export TDAI_LLM_BASE_URL="https://api.deepseek.com/v1"
 export TDAI_LLM_MODEL="gpt-4o-mini"
 
 node --import tsx src/gateway/server.ts
