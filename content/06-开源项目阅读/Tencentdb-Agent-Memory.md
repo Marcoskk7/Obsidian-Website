@@ -186,8 +186,12 @@ ACL 最先, 如果没权限, 那么根本不需要召回
 
 ```bash
 export TDAI_GATEWAY_CONFIG="$PWD/tdai-gateway.standalone.yaml"
-export TDAI_LLM_API_KEY="sk-5e629e0c72774e82add1a21d262822"
+export TDAI_LLM_API_KEY="sk-5e629e0c72774e82add1a21d26282282"
 export TDAI_LLM_BASE_URL="https://api.deepseek.com/v1"
-export TDAI_LLM_MODEL="gpt-4o-mini"
+export TDAI_LLM_MODEL="deepseek-v4-flash"
 
 node --import tsx src/gateway/server.ts
+
+
+
+启动 MemoryProxy:
