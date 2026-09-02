@@ -174,3 +174,20 @@ ACL 最先, 如果没权限, 那么根本不需要召回
 
 
 需要注意, 资产的状态是乱序的, 无序的, 补写或者纠正, 有可能, 一开始是同意了, 但是后面发现不正确了, 我们可能会更改资产对应的状态
+
+
+
+
+
+
+
+开发模式启动 MemoryCore:
+启动 Standalone Gateway
+
+```bash
+export TDAI_GATEWAY_CONFIG="$PWD/tdai-gateway.standalone.yaml"
+export TDAI_LLM_API_KEY="your-api-key"
+export TDAI_LLM_BASE_URL="https://api.openai.com/v1"
+export TDAI_LLM_MODEL="gpt-4o-mini"
+
+node --import tsx src/gateway/server.ts
