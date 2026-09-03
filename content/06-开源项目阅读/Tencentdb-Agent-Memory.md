@@ -195,3 +195,14 @@ node --import tsx src/gateway/server.ts
 
 
 启动 MemoryProxy:
+
+
+上游 SSE
+  -> 识别文本、tool call、stop_reason
+  -> 暂存最后的 message_delta/message_stop
+  -> 如果检测到完成候选：
+       把 stop_reason=end_turn 改成 tool_use
+       插入 AskUserQuestion
+       发送给 Claude Code
+     否则：
+       原样发送原始结束事件
