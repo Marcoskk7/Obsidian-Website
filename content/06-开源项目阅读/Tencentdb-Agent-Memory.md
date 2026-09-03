@@ -207,3 +207,6 @@ node --import tsx src/gateway/server.ts
        发送给 Claude Code
      否则：
        原样发送原始结束事件
+
+**同一个 message 里追加 `AskUserQuestion`，并由流式 Hook 暂存结束事件后注入。**  
+原因是当前 Proxy 不能在 HTTP 流关闭后主动发起新的客户端响应；下一次请求方案只有在 Claude Code 自动继续发请求时才可靠。
