@@ -196,6 +196,7 @@ node --import tsx src/gateway/server.ts
 
 启动 MemoryProxy:
 
+```
 
 上游 SSE
   -> 识别文本、tool call、stop_reason
