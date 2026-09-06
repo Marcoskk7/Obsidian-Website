@@ -229,3 +229,5 @@ def levelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
 P15 回溯 组合型 剪枝
 
 回溯问题的时间复杂度是叶子的节点数乘上从根节点到该叶子节点的长度
+![image.png](https://img.486597.xyz/img/20260906213755676.png)
+比如这里的时间复杂度就是C NK乘上K
