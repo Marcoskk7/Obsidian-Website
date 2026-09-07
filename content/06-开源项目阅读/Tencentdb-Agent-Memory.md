@@ -210,3 +210,10 @@ node --import tsx src/gateway/server.ts
 
 **同一个 message 里追加 `AskUserQuestion`，并由流式 Hook 暂存结束事件后注入。**  
 原因是当前 Proxy 不能在 HTTP 流关闭后主动发起新的客户端响应；下一次请求方案只有在 Claude Code 自动继续发请求时才可靠。
+
+
+
+
+
+老师给了什么思路？：
+我们可以把一次 commit log 看成一个人工确认的子任务锚点。围绕这个锚点，关联这次任务期间产生的对话、代码修改和召回资产，形成可检索的历史单元。即使系统一开始只有一个大 task，也可以借助 commit log 动态拆成更细的 task 节点，用来承接历史关联。
