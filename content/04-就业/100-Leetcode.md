@@ -227,7 +227,7 @@ def levelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
 
 
 P15 回溯 组合型 剪枝
-
+其实在回溯类问题中, i 基本上就是代指目前 path 的长度
 回溯问题的时间复杂度是叶子的节点数乘上从根节点到该叶子节点的长度
 ![image.png](https://img.486597.xyz/img/20260906213755676.png)
 比如这里的时间复杂度就是C NK乘上K
