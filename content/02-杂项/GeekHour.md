@@ -12,3 +12,4 @@ done
 Kafka
 
 在Kafka 中可以有多个生产者和多个消费者, 针对不同的 topic 可以创建多个通道, 且每个通道还能划分为多个 partition, 每个 partition 中是有序的![image.png](https://img.486597.xyz/img/20260907110333081.png)
+实际的应用场景是, 希望同一个用户的订购信息是有序的, 那么就都根据一个 key, 放在同一个 partition 中
