@@ -218,4 +218,31 @@ node --import tsx src/gateway/server.ts
 老师给了什么思路？：
 我们可以把一次 commit log 看成一个人工确认的子任务锚点。围绕这个锚点，关联这次任务期间产生的对话、代码修改和召回资产，形成可检索的历史单元。即使系统一开始只有一个大 task，也可以借助 commit log 动态拆成更细的 task 节点，用来承接历史关联。
 
-资产评估不能只看单轮效果，而要看资产注入后，用户有没有切换别的话题， 如果已经开始聊别的内容，那么说明本次资产注入是有效的，任务yi。评估信号可以包括后续任务状态是否继续推进、是否发生任务切换，以及最终是否 commit 或完成提交。commit 是高置信度成功信号，但不是唯一信号。
+资产评估不能只看单轮效果，而要看资产注入后，用户有没有切换别的话题， 如果已经开始聊别的内容，那么说明本次资产注入是有效的，任务已完成。评估信号可以包括后续任务状态是否继续推进、是否发生任务切换，以及最终是否 commit 或完成提交。commit 是高置信度成功信号，但不是唯一信号。
+
+
+
+我们目前的实现思路：
+Claude/Agent 请求
+    ↓
+MemoryProxy 创建或恢复 TaskRun
+    ↓
+读取已批准的 Skill / Asset
+    ↓
+记录 asset access
+    ↓
+记录 recall → select → inject
+    ↓
+模型生成工具调用
+    ↓
+记录 tool intent / tool result
+    ↓
+记录 Agent usage claim
+    ↓
+采集 diff / validation / review
+    ↓
+关闭 TaskRun
+    ↓
+生成 candidate + receipt
+    ↓
+MemoryPanel 查询、审核、展示
